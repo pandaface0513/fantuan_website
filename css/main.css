@@ -12,31 +12,34 @@ font-family: lato;
 
 .col1of1{
 	width: 100%;
-	height: 15em;
-	
-	
+	height: auto;
+background-color: #383838;
 }
 
 .col1of2{
 	width: 50%;
+	height: auto;
 }
 
 .col1of4{
 	width: 25%;
+	height: auto;
 }
 
 .col1of10{
 	width: 10%;
+	height: auto;
 }
 
 .col7of10{
 
 	width:70%;
 	margin-left: 15%;
-	
+	height: auto;
 	margin-top: 2em;
 	margin-bottom: 5em;
 	position: relative;
+	
 }
 
 h1{
@@ -51,7 +54,7 @@ nav{
 }
 
 nav p{
-	margin-left: 60%;
+	margin-left: 78%;
 	padding-top: 30px;
 }
 
@@ -86,7 +89,7 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .searchBar input[type=text]{
-	margin-left: 57%;
+	margin-left: 69%;
 	
 	margin-top: 1em;
 	vertical-align: top;
@@ -184,6 +187,7 @@ background-color: rgba(255,255,255,0.5);
 	width: 45%;
 	height: 30px;
 	display: inline-block;
+	border: 1px solid #42ACA4;
 }
 
 .subDetails button{
@@ -201,11 +205,12 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .subDetails h3{
-	font-size: 0.9em;
+	font-size: 1.1em;
 	margin-left: 5%;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	line-height: 1.3em;
+	color: #5A5A59;
 }
 
 
@@ -214,7 +219,7 @@ background-color: rgba(255,255,255,0.5);
 	width: 100%;
 	background-color: white;
 	height: 30px;
-	border: 1px solid #8C8E91;
+	
 }
 
 .boxTitle p{
@@ -225,11 +230,88 @@ background-color: rgba(255,255,255,0.5);
 
 }
 
+#largerBox{
+
+	height:40%;
+}
+
+#middleBox{
+
+	height:30%;
+}
+
+#smallBox{
+
+	height:20%;
+}
+
+.deliveryTime{
+	width: 15%;
+	
+	margin-left: 5%;
+	display: inline-block;
+}
+
+.deliveryTime p{
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #42ACA4;
+
+}
+
+
+.deliveryInfo{
+display: inline-block;
+width:79%;
+
+vertical-align: top;
+}
+
+.deliveryInfo select{
+
+	margin-top: 1em;
+	margin-left: 5%;
+	width: 25%;
+	border: 1px solid #42ACA4;
+}
+
+
+.deliveryInfo input[type=text]{
+
+	display: block;
+	margin-left: 5%;
+	margin-top: 1em;
+	width: 75%;
+	height: 5em;
+	
+}
+
+.deliveryButtons{
+margin-left: 5%;
+margin-right: 20%;
+
+}
+
+.deliveryButton{
+	width:18%;
+	border: 1px solid #5A5A59;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-right: 1.49%;
+	display: inline-block;
+
+
+}
 .priceComponents{
 	margin-left: 5%;
 	width:45%;
-	margin-top: 2em;
+	margin-top: 1em;
 	display: inline-block;
+	font-size: 1.2em;
+	text-align: right;
 	
 }
 
@@ -248,6 +330,7 @@ background-color: rgba(255,255,255,0.5);
 	margin-top: 0.5em;
 	color: black;
 	text-align: center;
+	font-weight: bold;
 	
 }
 
@@ -255,7 +338,7 @@ background-color: rgba(255,255,255,0.5);
 .priceTotal{
 	margin-left: 2%;
 	width:44%;
-	margin-top: 2.5em;
+	margin-top: 2em;
 	display: inline-block;
 	
 	vertical-align: top;
@@ -268,25 +351,50 @@ display: inline-block;
 
 }
 
-
 .footer{
 
-	width: 100%;
-	background-color: #383838;
-	height: 15em;
-	
-	
+  width: 80%;
+  margin-left: 15%;
+  
+  height: 400px;
 }
 
+.hoursContainer{
+  width: 28.5%;
+  height: 80%;
+  display: inline-block;
+  margin-top: 3em;
+  border-right: 2px solid #42ACA4;
+  color: white;
+
+}
 
 .hours{
+	
+	margin-left: 40%;
+	margin-top: 22%;
+}
 
-	width: 23%;
-	margin-left: 15%;
-	height: 80%;
-	border: 1px solid white;
-	margin-top: 2em;
+.hours p{
 
-
+	text-align: left;
+	margin-bottom: 1em;
+	font-size: 1.25em;
 
 }
+
+.footerInfo{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 7em;
+  margin-top: 7%;
+  color: white;
+  font-size: 1.25em;
+  
+}
+
+.footerInfo p{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
