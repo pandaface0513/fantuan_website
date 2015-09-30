@@ -279,8 +279,7 @@ vertical-align: top;
 }
 
 
-.deliveryInfo input[type=text]{
-
+.deliveryInfo textarea{
 	display: block;
 	margin-left: 5%;
 	margin-top: 1em;
