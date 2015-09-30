@@ -10,6 +10,20 @@ background-image: url("../img/wood-bg.png");
 font-family: lato;
 }
 
+img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
 .col1of1{
 	width: 100%;
 	height: auto;
@@ -66,31 +80,23 @@ background-color: rgba(255,255,255,0.5);
 }
 
 .searchBar{
-
 	width: 70%;
 	margin-left: 15%;
-
-
-	}
-
-
-
-
-.searchBar p{
-	font-size: 1.5em;
-	opacity: 0.7;
-	display: inline-block;
-	padding-top: 0.5em;
 }
 
+.searchBar p{
+	font-size: 1.0em;
+	opacity: 0.5;
+	display: inline-block;
+	padding-top: 1em;
+}
 
 #black{
 	opacity: 1;
 }
 
 .searchBar input[type=text]{
-	margin-left: 69%;
-	
+	margin-left: 67%;
 	margin-top: 1em;
 	vertical-align: top;
 	height: 25px;
@@ -98,8 +104,28 @@ background-color: rgba(255,255,255,0.5);
 	
 }
 
-.searchBar button{
+input.quantity{
+    max-width: 2rem;
+    background: none;
+    border: 1px solid #42ACA4;
+}
+
+.orderItem button{
 	
+	vertical-align: center;
+	height: 1.4em;
+	width: 1em;
+    
+    color: white;
+	
+	margin-left:0;
+	padding:0;
+	background-color: #42ACA4;
+	border: 1px solid #42ACA4;
+	
+}
+
+.searchBar button{
 	
 	margin-top: 1em;
 	vertical-align: top;
@@ -110,12 +136,10 @@ background-color: rgba(255,255,255,0.5);
 	padding:0;
 	background-color: #42ACA4;
 	border: none;
-
 	
 }
 
 .items{
-
 	width:32.5%;
 	display: inline-block;
 	
@@ -141,9 +165,12 @@ background-color: rgba(255,255,255,0.5);
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-weight: bold;
-	
-
 }
+
+.greenText {
+    color: #42ACA4;
+}
+
 
 .details{
 
@@ -226,8 +253,7 @@ background-color: rgba(255,255,255,0.5);
 	padding-top: 4px;
 	margin-left: 5%;
 	color: #42ACA4;
-
-
+    font-weight: bold;
 }
 
 #largerBox{
@@ -242,7 +268,7 @@ background-color: rgba(255,255,255,0.5);
 
 #smallBox{
 
-	height:20%;
+	height:23%;
 }
 
 .deliveryTime{
@@ -285,7 +311,7 @@ vertical-align: top;
 	margin-top: 1em;
 	width: 75%;
 	height: 5em;
-	
+    text-align: justify;	
 }
 
 .deliveryButtons{
@@ -301,9 +327,19 @@ margin-right: 20%;
 	margin-top: 0.5em;
 	margin-right: 1.49%;
 	display: inline-block;
-
-
+    background: #FFF;
 }
+
+.deliveryButton:hover{
+	width:18%;
+	border: 1px solid #5A5A59;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-right: 1.49%;
+	display: inline-block;
+    background: #42ACA4;
+}
+
 .priceComponents{
 	margin-left: 5%;
 	width:45%;
@@ -315,22 +351,20 @@ margin-right: 20%;
 }
 
 .priceCat{
-
 	display: inline-block;
-	margin-right: 13%;
+	margin-right: 12%;
 	color: #42ACA4;
 	font-weight: bold;
+    text-align: center;
 }
 
 .priceAmount{
-
 	display: inline-block;
-	margin-right: 5%;
+	margin-right: 6%;
 	margin-top: 0.5em;
 	color: black;
 	text-align: center;
 	font-weight: bold;
-	
 }
 
 

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang='en-us'>
 <head>
-    <meta charset='utf-8'>
-    <title>Sample Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ordering Page</title>
+    <!-- Bootstrap -->
     <link href='css/main.css' type='text/css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,800' rel='stylesheet' type='text/css'>
+
     
 </head>
     
@@ -17,13 +21,10 @@
 <div class="topBar">
 
 	<div class="searchBar">
-	<p>Test > Test ></p>
-	<p id="black"> Test</p>
-	<input type="text" name="firstname">
-	<button type="button">*Icon*</button>
-
-
-
+	<p>餐厅列表 > 老东北 ></p>
+	<p id="black"> 订单详情</p>
+	<input type="text" placeholder="搜索餐厅" name="firstname">
+	<button type="button"><img src="img/toolbar_find.png"/></button>
 	</div>
 
 
@@ -33,30 +34,41 @@
 
 	<div class="items">
 		<div class="boxTitle">
-				<p>Items</p>
-			
+            <p><strong>订餐详情</strong></p>
 		</div>
-		<h4>Sub-title</h4>
+        
+        <h4 class="greenText">老东北</h4>
 
 		<div class="orderItem">
-		<p>Item Name<br>
-		$12.36</p>
+            <div class="">
+                <p>招牌酱大骨（大)<br>
+		          $12.95</p>
+            </div>
+            
+            <div class="right col1of4">
+                <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="5">
+            </div>
+		</div>
+
+		<div class="orderItem">
+            <div class="">
+                <p>老汤干豆腐<br>
+                $9.95</p>
+            </div>
+            
+            <div class="right col1of4"><input id="tofuCounter" class="quantity" type="number" name="tofu" value="1" min="1" max="5"></div>
 
 		</div>
 
 		<div class="orderItem">
-		<p>Item Name<br>
-		$12.36</p>
+		<p>小鸡炖蘑菇<br>
+		$15.95</p>
+            
+            <div class="right col1of4"><input id="mushroomCounter" class="quantity" type="number" name="mushroom" value="1" min="1" max="5"></div>
 
 		</div>
 
-		<div class="orderItem">
-		<p>Item Name<br>
-		$12.36</p>
-
-		</div>
-
-		<h4>Total: $38.46</h4>
+        <h4 id="sum" class="greenText">餐费总额：$38.46</h4>
 	</div>
 
 	<div class="details">
@@ -64,76 +76,76 @@
 		<div class="subDetails" id="middleBox">
 
 			<div class="boxTitle">
-			<p>Box 1</p>
-			<select>
-			  <option value="volvo">Volvo</option>
-			  <option value="saab">Saab</option>
-			  <option value="mercedes">Mercedes</option>
-			  <option value="audi">Audi</option>
-			  
-		      </select>
-			  <button type="button">B</button>
-
-			  <h3>Sofia Tang<br>
-			  778-239-9269<br>
-			  17420 61A ave, Surrey, B.C.</h3>
+			<p>送餐地址</p>
 			</div>
+            
+            
+            <select id="addressChooser">
+			  <option value="" disabled selected>从地址簿选择</option>
+			  <option value="A">Address A</option>
+			  <option value="B">Address B</option>
+			  <option value="C">Address C</option>
+		   </select>
+            
+            <div class="button">
+            <button>*Icon*</button>
+            </div>
+            
+            <div id="deliveryAddress">
+
+            </div>
 
 		</div>
 
 		<div class="subDetails" id="largerBox">
 			<div class="boxTitle">
-				<p>Box 2</p>
+				<p>配送信息</p>
 				</div>
 			<div class="deliveryTime">
-			<p>Test</p>
-			<p>Test 2</p>
+			<p>送餐时间</p>
+			<p>备注留言</p>
 			</div>
 
 			<div class="deliveryInfo">
 				<select>
-				  <option value="volvo">Volvo</option>
-				  <option value="saab">Saab</option>
-				  <option value="mercedes">Mercedes</option>
-				  <option value="audi">Audi</option>
+				  <option value="1">12:30 ~ 12:59</option>
+				  <option value="2">13:00 ~ 13:29</option>
+				  <option value="3">13:30 ~ 13:59</option>
+				  <option value="4">14:00 ~ 14:29</option>
 				  
 			      </select>
 
-			      <textarea>
-			      	
-			      </textarea>
+			      <textarea id="commentBox"></textarea>
+                
 			      		<div class="deliveryButtons">
 				      		<div class="deliveryButton">
-								<p>Test</p>
+								加辣
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								走后门
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								不要葱
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								不要香菜
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								带餐具
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								不要按门铃
 							</div>
 
 							<div class="deliveryButton">
-								<p>Test</p>
+								请带找零
 							</div>
 
-							<div class="deliveryButton">
-								<p>Test</p>
-							</div>
 						</div>
 			</div>
 
@@ -142,32 +154,37 @@
 
 		<div class="subDetails" id="smallBox" >
 		<div class="boxTitle">
-			<p>Box 3</p>
+			<p>费用统计</p>
 			</div>
 
 			<div class="priceComponents">
-			<p class="priceCat">Summary</p>
-			<p class="priceCat">Gas</p>
-			<p class="priceCat">Tax</p><br>
+			<p class="priceCat">餐费</p>
+            <p class="priceCat"></p>
+			<p class="priceCat">外送费</p>
+            <p class="priceCat"></p>
+			<p class="priceCat">税</p><br>
+
 			<p class="priceAmount" id="summary">$38.55</p>
-			<p class="priceAmount" id="gas">+</p>
-			<p class="priceAmount" id="tax">$8.55</p>
+            <p class="priceAmount">+</p>
+			<p class="priceAmount" id="gas">$8 (7.9公里)</p>
 			<p class="priceAmount">+</p>
-			<p class="priceAmount">$2.00</p>
+			<p class="priceAmount" id="tax">$2.44</p>
 
 
 
 			</div>
 
 			<div class="priceTotal">
-			<h2>= $49.85(More Text)</h2>
+			<h2>= $49.85 (建议小费至少10%)</h2>
 
 			</div>
 
 
 
 		</div>
-		<button type="button">Purchase</button>
+        
+        <br><br><br>
+		<button id="submitButton" type="button">提交订单</button>
 
 	</div>
 
@@ -179,9 +196,9 @@
 	<div class="footer">
 		<div class="hoursContainer">
 			<div class="hours">
-				<p>Hours<br>
+				<p>营业时间<br>
 				11am-11:30pm</p>
-				<p>Phone:<br>
+				<p>联系电话<br>
 				778-788-3875</p>
 			</div>
 
@@ -189,40 +206,29 @@
 		
 
 		<div class="footerInfo">
-			<h2>Title</h2>
+			<h2>关于我们</h2>
 			
-			<p>SFU Surrey</p>
-			<p>250-13450 </p>
-			<p>Surrey, B.C.</p>
-			
-
-			
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
 		</div>
 
 		<div class="footerInfo">
-			<h2>Title</h2>
+			<h2>联系我们</h2>
 			
-			<p>SFU Surrey</p>
-			<p>250-13450 </p>
-			<p>Surrey, B.C.</p>
-			
-
-			
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
 		</div>
 
 
 <div class="footerInfo">
-			<h2>Title</h2>
-			
-			<p>SFU Surrey</p>
-			<p>250-13450 </p>
-			<p>Surrey, B.C.</p>
-			
+			<h2>疑问解答</h2>
 
-			
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
 		</div>
-
-
 
 	</div>
 
@@ -232,7 +238,13 @@
 
 
 
-
+<script src="jquery-2.1.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="bootstrap-number-input.js"></script>
+<script src="script.js"></script>
+    
+    
 </body>
 
 </html>
