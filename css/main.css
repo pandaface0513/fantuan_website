@@ -139,6 +139,109 @@ input.quantity{
 	
 }
 
+.locationFilter{
+	width:32.5%;
+	display: inline-block;
+	
+	margin-right: 5%;
+	height: auto;
+	
+}
+
+.city{
+	width:100%;
+	display: block;
+	height: auto;
+	background-color: rgba(255,255,255,0.5);
+	margin-bottom: 2em;
+}
+
+.cityButtons{
+	height:80%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left:10%; 
+	width: 100%;
+}
+
+
+.cityButton{
+width:34%;
+
+margin-bottom: 2em;
+background-color: white;
+text-align: center;
+display: inline-block;
+margin-right: 10%;
+cursor: pointer;
+
+}
+
+
+
+#smallCity{
+	margin-right: 3%;
+	width: 23.3%;
+	margin-bottom: 1em;
+}
+
+#smallCity p{
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+}
+
+.cityButton p{
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.locationGridItem{
+
+width: 23.3%;
+margin-bottom: 2em;
+display: inline-block;
+margin-right: 5%;
+height: 10em;
+background-color: rgba(255,255,255,0.5);
+vertical-align: top;
+border-radius: 10%;
+overflow: hidden;
+
+}
+
+.gridImage{
+	height: 75%;
+	width: 100%;
+
+	
+}
+
+.gridImage img{
+	width:100%;
+	height: 100%;
+}
+
+.gridText{
+	width: 44%;
+	margin-left: 5%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	display: inline-block;
+	
+}
+
+.gridTextRight{
+	width: 44%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: right;
+	color: #42ACA4;
+	margin-right: 5%;
+	display:inline-block;
+
+}
+
+
 .items{
 	width:32.5%;
 	display: inline-block;
@@ -152,6 +255,7 @@ input.quantity{
 	margin-left: 5%;
 	margin-top: 1em;
 }
+
 
 .about{
 	width:32.5%;
@@ -202,6 +306,16 @@ padding-top: 0.5em;
     color: #42ACA4;
 }
 
+.locations{
+
+
+	width: 62%;
+	display: inline-block;
+	margin-right: 0;
+	height: auto;
+	vertical-align: top;
+	
+	}
 
 .details{
 
@@ -212,6 +326,8 @@ padding-top: 0.5em;
 	height: 35em;
 	vertical-align: top;
 }
+
+
 
 .detailsContainer{
 
