@@ -16,6 +16,11 @@ img{
     max-height: 100%;
 }
 
+.hoursImage img {
+    width: 6rem;
+    height: auto;
+}
+
 .right{
     float: right;
 }
@@ -61,15 +66,39 @@ h1{
 }
 
 nav{
-
 	height: 80px;
-	
 	background-color: white;
 }
 
-nav p{
-	margin-left: 78%;
-	padding-top: 30px;
+.logo,
+.navButtons{
+    display: inline-block;
+}
+
+.logo {
+    margin-left: 15%;
+    padding-top: 1.3rem;
+}
+
+.logo p {
+    display: inline-block;
+    font-size: 1.7rem;
+    vertical-align: top;
+}
+
+nav .navButtons{
+	margin-left: 50%;
+	padding-top: 1.25rem;
+}
+
+nav img{
+    width: auto;
+    height: 2.1rem;
+}
+
+nav button {
+    background: none;
+    border: none;
 }
 
 .topBar{
@@ -170,26 +199,37 @@ input.quantity{
 
 
 .cityButton{
-width:34%;
+    width:34%;
+    margin-bottom: 2em;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10%;
+    cursor: pointer;
+}
 
-margin-bottom: 2em;
-background-color: white;
-text-align: center;
-display: inline-block;
-margin-right: 10%;
-cursor: pointer;
-
+.cityButton.selected, .typeButton.selected{
+    border-color: #42ACA4;
+    border-width: 0.25rem;
+    border-style: solid;
 }
 
 
 
-#smallCity{
+.typeButton{
+    width:34%;
+    margin-bottom: 2em;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10%;
+    cursor: pointer;
 	margin-right: 3%;
 	width: 23.3%;
 	margin-bottom: 1em;
 }
 
-#smallCity p{
+.typeButton p{
 	padding-top: 0.75em;
 	padding-bottom: 0.75em;
 }
@@ -216,12 +256,10 @@ overflow: hidden;
 .gridImage{
 	height: 75%;
 	width: 100%;
-
-	
 }
 
 .gridImage img{
-	width:100%;
+	width: 100%;
 	height: 100%;
 }
 
@@ -231,7 +269,6 @@ overflow: hidden;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	display: inline-block;
-	
 }
 
 .gridTextRight{
@@ -239,10 +276,25 @@ overflow: hidden;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	text-align: right;
-	color: #42ACA4;
-	margin-right: 5%;
+	margin-right: 2%;
+    font-size: 0.75rem;
 	display:inline-block;
+    padding: 0;
+}
 
+.gridTextRight p:before {
+    content: ' \25CF';
+    font-size: 10px;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+.green{
+    color: #42ACA4;
+}
+
+.grey{
+    color: grey;
 }
 
 
@@ -625,18 +677,20 @@ display: inline-block;
 
 }
 
+.hoursImage{
+    display: inline-block;
+}
+
 .hours{
-	
-	margin-left: 40%;
+    display: inline-block;
+	margin-left: 20%;
 	margin-top: 22%;
 }
 
 .hours p{
-
 	text-align: left;
 	margin-bottom: 1em;
 	font-size: 1.25em;
-
 }
 
 .footerInfo{
@@ -654,5 +708,32 @@ display: inline-block;
 	margin-bottom: 1em;
 }
 
+/* weird stuffs section */
+.checkmark {
+    display:inline-block;
+    width: 22px;
+    height:22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.checkmark_stem {
+    position: absolute;
+    width:3px;
+    height:9px;
+    background-color:#ccc;
+    left:11px;
+    top:6px;
+}
+
+.checkmark_kick {
+    position: absolute;
+    width:3px;
+    height:3px;
+    background-color:#ccc;
+    left:8px;
+    top:12px;
+}
 
 
