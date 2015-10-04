@@ -19,7 +19,9 @@
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
         <div class="navButtons">
             <button type="button"><img src="img/user.png"/></button>
-            <button type="button"><img src="img/cart.png"/></button>
+            <button type="button"><a href="checkout.html"><img src="img/cart.png"/>
+                 <span id="cartCount">3</div></a>
+            </button>
         </div>
     </p>
 </nav>
@@ -52,7 +54,7 @@
             </div>
             
             <div class="right col1of4">
-                <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="5">
+                <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="99">
             </div>
 		</div>
 
@@ -62,7 +64,7 @@
                 $9.95</p>
             </div>
             
-            <div class="right col1of4"><input id="tofuCounter" class="quantity" type="number" name="tofu" value="1" min="1" max="5"></div>
+            <div class="right col1of4"><input id="tofuCounter" class="quantity" type="number" name="tofu" value="1" min="1" max="99"></div>
 
 		</div>
 
@@ -70,7 +72,7 @@
 		<p>小鸡炖蘑菇<br>
 		$15.95</p>
             
-            <div class="right col1of4"><input id="mushroomCounter" class="quantity" type="number" name="mushroom" value="1" min="1" max="5"></div>
+            <div class="right col1of4"><input id="mushroomCounter" class="quantity" type="number" name="mushroom" value="1" min="1" max="99"></div>
 
 		</div>
 
@@ -93,13 +95,13 @@
 			  <option value="C">Address C</option>
 		   </select>
             
-            <div class="button">
-            <button>*Icon*</button>
-            </div>
+            <button id="addAddressButton" type="button">+ 新地址</button>
             
             <div id="deliveryAddress">
 
             </div>
+            
+
 
 		</div>
 
@@ -109,6 +111,7 @@
 				</div>
 			<div class="deliveryTime">
 			<p>送餐时间</p>
+            <p>选择优惠</p>
 			<p>备注留言</p>
 			</div>
 
@@ -118,8 +121,11 @@
 				  <option value="2">13:00 ~ 13:29</option>
 				  <option value="3">13:30 ~ 13:59</option>
 				  <option value="4">14:00 ~ 14:29</option>
-				  
-			      </select>
+			     </select>
+                
+                <div class="coupon">
+                    <p>有3个优惠券可用</p><input type="button" value="使用 >"/>
+                </div>
 
 			      <textarea id="commentBox"></textarea>
                 
@@ -184,13 +190,9 @@
 			<h2>= $49.85 (建议小费至少10%)</h2>
 
 			</div>
-
-
-
 		</div>
         
-        <br><br><br>
-		<button id="submitButton" type="button">提交订单</button>
+        <button id="submitButton" type="button">提交订单</button>
 
 	</div>
 

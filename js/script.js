@@ -85,6 +85,9 @@ $(document).ready(function(){
         
         $('.priceTotal').html("<h2>= $" + total + " (建议小费至少10%)</h2>");
         
+        var count = boneValue * 1 + tofuValue * 1 + mushroomValue * 1;
+        $('#cartCount').html(count);
+        
     });
     
     

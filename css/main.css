@@ -99,6 +99,24 @@ nav img{
 nav button {
     background: none;
     border: none;
+    position: relative;
+}
+
+nav button span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+
+    background: #42ACA4;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    
+    font-size: 0.7rem;
 }
 
 .topBar{
@@ -397,7 +415,6 @@ padding-bottom: 0.5em;
 
 
 .detailsContainer{
-
 	width: 62%;
 	display: inline-block;
 	
@@ -407,20 +424,22 @@ padding-bottom: 0.5em;
 }
 
 
-.details button{
-	
-	
-	
+#submitButton{
 	height: 40px;
 	width: 20%;
-	right: 0;
-	bottom: 0;
 	background-color: #42ACA4;
 	border: none;
-	position: absolute;
+	position: static;
+    float : right;
 	color: white;
+}
 
-	
+#addAddressButton{
+	height: 30px;
+	width: 10%;
+	background-color: #42ACA4;
+	border: none;
+	color: white;
 }
 
 .subDetails{
@@ -429,7 +448,6 @@ padding-bottom: 0.5em;
 	margin-bottom: 1em;
 	
 	background-color: rgba(255,255,255,0.5);
-
 }
 
 .aboutDetails{
@@ -437,14 +455,10 @@ padding-bottom: 0.5em;
 	width:100%;
 	height: auto;
 	margin-bottom: 1em;
-	
 	background-color: rgba(255,255,255,0.5);
-
-
 }
 
 .subDetails select{
-
 	margin-left: 5%;
 	margin-top: 1.5em;
 	width: 45%;
@@ -454,9 +468,7 @@ padding-bottom: 0.5em;
 }
 
 .subDetails button{
-	
-	
-	margin-top: 1.5em;
+    margin-top: 1.5em;
 	vertical-align: top;
 	height: 30px;
 	width: 15%;
@@ -518,12 +530,11 @@ padding-bottom: 0.5em;
 }
 
 .aboutParagraph p{
-	
 	margin-bottom: 0.5em;
 }
 
 #topParagraph{
-margin-top: 2em;
+    margin-top: 2em;
 }
 
 
@@ -532,17 +543,15 @@ margin-top: 2em;
 }
 
 #largerBox{
-
-	height:40%;
+	height:auto;
+    padding-bottom: 0.5rem;
 }
 
 #middleBox{
-
 	height:30%;
 }
 
 #smallBox{
-
 	height:23%;
 }
 
@@ -554,31 +563,57 @@ margin-top: 2em;
 }
 
 .deliveryTime p{
-
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-weight: bold;
 	font-size: 1.1em;
 	color: #42ACA4;
-
 }
 
 
 .deliveryInfo{
-display: inline-block;
-width:79%;
-
-vertical-align: top;
+    display: inline-block;
+    width:79%;
+    vertical-align: top;
 }
 
 .deliveryInfo select{
-
 	margin-top: 1em;
 	margin-left: 5%;
-	width: 25%;
+	width: 25%
 	border: 1px solid #42ACA4;
 }
 
+.coupon{
+    display: block;
+    margin-top: 1rem;
+    width: 75%;
+    height: 2rem;
+    margin-left: 5%;
+    background: white;
+    border: 1px solid #42ACA4;
+}
+
+.coupon p{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    padding: 0.25rem;
+}
+
+#couponCount{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.coupon input{
+    float: right;
+    width: 5rem;
+    height: 1.9rem;
+    background: white;
+    border: none;
+}
 
 .deliveryInfo textarea{
 	display: block;
@@ -735,5 +770,4 @@ display: inline-block;
     left:8px;
     top:12px;
 }
-
 
