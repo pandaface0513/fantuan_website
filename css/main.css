@@ -774,7 +774,7 @@ display: inline-block;
 dialog {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 22.5%;
     height: auto;
     background: white;
     border: 1px solid #42ACA4;
@@ -784,5 +784,25 @@ dialog {
 #addAddressForm input[type=text]{
     display: block;
     height: 2rem;
-    width: 100%;
+    width: 80%;
+    border: 1px solid #42ACA4;
+    color: black;
+    margin-top: 1rem;
+    margin-left: 6%;
+}
+
+#addAddressForm textarea{
+     display: block;
+    height: 5rem;
+    width: 80%;
+    border: 1px solid #42ACA4;
+    color: black;
+    margin-top: 1rem;
+    margin-left: 6%;
+}
+
+#exit, #save{
+    color: white;
+    margin-left: 6%;
+    width: 37%;
 }
