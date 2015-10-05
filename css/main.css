@@ -339,6 +339,11 @@ overflow: hidden;
 
 }
 
+.foodGridItem:hover{
+    background-color: dimgrey;
+    color: white;
+}
+
 .foodInfo{
 
 	display: inline-block;
@@ -965,7 +970,7 @@ dialog {
     border-top: 2px solid grey;
 }
 
-.cartTitle .cart{
+.cartContainer .cart{
     display: none;
 }
 
