@@ -13,6 +13,17 @@ var sum, tax, total;
 //to start all the listeners
 $(document).ready(function(){
     
+    //dialog
+    var dialog = document.getElementById('window');
+    
+    $('#addAddressButton').click(function(){
+        dialog.showModal();
+    });
+    
+    $('#exit').click(function(){
+        dialog.close();
+    });
+    
     //detect comment boxes click
     $('.deliveryButton').click(function(e){
         //console.log("clicked");

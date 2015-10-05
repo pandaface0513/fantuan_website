@@ -771,3 +771,18 @@ display: inline-block;
     top:12px;
 }
 
+dialog {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+    background: white;
+    border: 1px solid #42ACA4;
+    padding: 5px 10px 20px 20px;
+}  
+
+#addAddressForm input[type=text]{
+    display: block;
+    height: 2rem;
+    width: 100%;
+}
