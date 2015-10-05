@@ -271,6 +271,7 @@ overflow: hidden;
 
 }
 
+
 .gridImage{
 	height: 75%;
 	width: 100%;
@@ -315,6 +316,44 @@ overflow: hidden;
     color: grey;
 }
 
+.foodGridItem{
+
+width: 40%;
+margin-bottom: 2em;
+display: inline-block;
+margin-right: 5%;
+height: 7em;
+background-color: rgba(255,255,255,0.5);
+vertical-align: top;
+border-radius: 5%;
+overflow: hidden;
+
+}
+
+.foodInfo{
+
+	display: inline-block;
+	
+	margin-left: 5%;
+	margin-top: 10%;
+	
+	width: 50%;
+}
+
+.foodGridImage{
+	height: 50%;
+	width: 33%;
+	margin-left: 5%;
+	margin-top: 8%;
+	vertical-align: top;
+	
+	display: inline-block;
+}
+
+.foodGridImage img{
+	width: 100%;
+	height: 100%;
+}
 
 .items{
 	width:32.5%;
@@ -366,6 +405,58 @@ padding-bottom: 0.5em;
 .categoryItem.selected{
     color: #FFF;
     background: #42ACA4;
+}
+
+
+.foodFilter{
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+border-bottom: 1px solid #BBB9AC;
+border-top: 1px solid #BBB9AC;
+}
+
+.foodFilter:hover{
+    
+    background: white;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+.foodFilter h4{
+	margin-left: 5%;
+}
+
+.restaurantPreview{
+
+	height:100%;
+	
+	margin-left: 5%; 
+	width: 100%;
+	
+}
+
+.previewImage{
+	
+	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+.previewImage img{
+	width: 90%;
+	height: auto;
+}
+
+.previewInfo{
+	font-weight: bold;
+	margin-bottom: 5%;
+}
+
+.previewInfo p{
+margin-bottom: 1.5%;
+
 }
 
 .about h4{
@@ -771,18 +862,3 @@ display: inline-block;
     top:12px;
 }
 
-dialog {
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: auto;
-    background: white;
-    border: 1px solid #42ACA4;
-    padding: 5px 10px 20px 20px;
-}  
-
-#addAddressForm input[type=text]{
-    display: block;
-    height: 2rem;
-    width: 100%;
-}
