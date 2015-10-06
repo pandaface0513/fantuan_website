@@ -16,6 +16,107 @@ img{
     max-height: 100%;
 }
 
+.mapContainer{
+	background-image: url("../img/map.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border: 1px solid black;
+	height: 850px;
+}
+
+.iconContainer{
+	height: 175px;
+	margin-top: 675px;
+	background-color: rgba(0,0,0,0.5);
+	}
+
+.landingIcons{
+	
+	height:100%;
+	margin-left: 15%;
+	margin-right: 15%;
+	
+}
+
+.landingIcon{
+
+width: 14%;
+vertical-align: bottom;
+margin-right:5%;
+margin-left: 5%;
+display: inline-block; 
+text-align: center;
+color: white;
+font-size: 1.5em;
+
+}
+
+.landingIcon img{
+	width: 50%;
+	height: auto;
+	margin-left: 3%;
+	
+	
+}
+.selectionText{
+	
+	background-color: #ECEDEC;
+	height: 150px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	
+}
+
+.selectionText h4{
+	padding-top: 1em;
+	
+}
+
+#landingPageBottom{
+	background-color: #ECEDEC;
+	margin-bottom: 0;
+}
+
+.blogList{
+	height: auto;
+	width: 10%;
+	background-color: white;
+	margin-left: 15%;
+	display: inline-block;
+}
+
+.blogListItem{
+	text-align: center;
+	width: 100%;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	border: 1px solid #d3d3d3;
+	font-weight: bold;
+}
+
+.blogPost{
+	width: 12%;
+	
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 4%;
+	height: auto;
+	margin-top: 4em;
+	
+}
+
+.blogPost img{
+	width: 100%;
+	height: auto;
+}
+
+.blogPost p{
+	font-weight: bold;
+	margin-top: 0.5em;
+	font-size: 1.2em;
+}
+
 .hoursImage img {
     width: 6rem;
     height: auto;
@@ -33,6 +134,8 @@ img{
 	width: 100%;
 	height: auto;
 background-color: #383838;
+margin-bottom: 5em;
+	position: relative;
 }
 
 .col1of2{
@@ -68,11 +171,6 @@ h1{
 nav{
 	height: 80px;
 	background-color: white;
-}
-
-a, a:active, a:link, a:visited{
-    text-decoration: none;
-    color: grey;
 }
 
 .logo,
@@ -282,10 +380,6 @@ overflow: hidden;
 	width: 100%;
 }
 
-.gridImage:hover{
-    cursor: pointer;
-}
-
 .gridImage img{
 	width: 100%;
 	height: 100%;
@@ -337,11 +431,6 @@ vertical-align: top;
 border-radius: 5%;
 overflow: hidden;
 
-}
-
-.foodGridItem:hover{
-    background-color: dimgrey;
-    color: white;
 }
 
 .foodInfo{
@@ -430,19 +519,15 @@ border-top: 1px solid #BBB9AC;
 }
 
 .foodFilter:hover{
+    
     background: white;
     cursor: pointer;
     cursor: hand;
 }
 
-.foodFilter.selected{
-    background: white;
-}
-
 
 .foodFilter h4{
 	margin-left: 5%;
-    display: inline-block;
 }
 
 .restaurantPreview{
@@ -880,141 +965,3 @@ display: inline-block;
     top:12px;
 }
 
-dialog {
-    margin-left: auto;
-    margin-right: auto;
-    width: 22.5%;
-    height: auto;
-    background: white;
-    border: 1px solid #42ACA4;
-    padding: 5px 10px 20px 20px;
-}  
-
-#addAddressForm input[type=text]{
-    display: block;
-    height: 2rem;
-    width: 80%;
-    border: 1px solid #42ACA4;
-    color: black;
-    margin-top: 1rem;
-    margin-left: 6%;
-}
-
-#addAddressForm textarea{
-     display: block;
-    height: 5rem;
-    width: 80%;
-    border: 1px solid #42ACA4;
-    color: black;
-    margin-top: 1rem;
-    margin-left: 6%;
-}
-
-#exit, #save{
-    color: white;
-    margin-left: 6%;
-    width: 37%;
-}
-
-.rArr{
-    display: inline-block;
-    float: right;
-}
-
-.rArr:after{
-    content:"\231d";
-    font-size: 1.3rem;
-    transform:rotate(45deg);
-    color: #42ACA4;
-    display: none;
-}
-
-.selected .rArr:after{
-    display:inline-block;
-}
-
-/*shopping cart hover */
-.cartContainer {
-    display: inline-block;
-    position: relative;
-    top: -2.2rem;
-    margin-left: 73%;
-    width: 15rem;
-    min-height: 3rem;
-    padding: 0;
-    z-index: 1;	
-    background-color: white;
-    border: 0.5px solid grey;
-}
-
-.cartTitle:hover {
-    background-color: #42ACA4;
-    cursor: pointer;
-}
-
-.cartTitle p{
-	padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    min-height: 3rem;
-	padding-left: 5%;
-    width: 100%;
-    font-weight: bold;
-    border-bottom: 1px solid grey;
-}
-
-.cart{
-    padding-bottom: 1rem;
-}
-
-.cart:before{
-    border-top: 2px solid grey;
-}
-
-.cartContainer .cart{
-    display: none;
-}
-
-.cart h4{
-    font-size: 0.75rem;
-    padding-left: 5%;
-    margin-top: 1.25rem;
-}
-
-.cart .orderItem{
-    font-size: 0.8rem;
-    color: black;
-    text-decoration: none;
-    list-style: none;
-}
-
-.cart .orderItem .right{
-    margin-top: 2rem;
-}
-
-.cart .orderItem input{
-    margin: 0;
-    max-height: 1rem;
-    height: auto;
-    width: 1rem;
-}
-
-.cart .orderItem button{
-    margin: 0;
-    max-height: 1rem;
-    height: auto;
-    width: 1rem;
-}
-
-.cart #sum{
-    font-size: 1rem;
-    display: inline-block;
-}
-
-.cart #goCartButton{
-    margin-left: 5%;
-    display: inline-block;
-    background-color: #42ACA4;
-	border: none;
-    padding: 0.5px;
-	color: white;
-}
