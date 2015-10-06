@@ -1012,7 +1012,7 @@ dialog {
     margin-left: 6%;
 }
 
-#exit, #save{
+#exit, #showMap, #saveMap, #exitMap{
     color: white;
     margin-left: 6%;
     width: 37%;
@@ -1084,7 +1084,7 @@ dialog {
 
 .cart .orderItem{
     font-size: 0.8rem;
-    color: black;
+    color: black;   
     text-decoration: none;
     list-style: none;
 }
@@ -1119,4 +1119,13 @@ dialog {
 	border: none;
     padding: 0.5px;
 	color: white;
+}
+
+/* style settings for Google map */
+#map-canvas
+{
+    margin: 1rem;
+    margin-bottom: 0;
+    width : 22rem; 	/* map width */
+    height: 22rem;	/* map height */
 }
