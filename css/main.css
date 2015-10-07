@@ -1,3 +1,5 @@
+/*@import 'normalize.css';*/
+
 *, *::after, *::before{
 
 box-sizing: border-box;
@@ -1079,7 +1081,8 @@ vertical-align: middle;
     top:12px;
 }
 
-dialog {
+.dialog {
+	position: fixed;
     margin-left: auto;
     margin-right: auto;
     width: 22.5%;
@@ -1087,7 +1090,12 @@ dialog {
     background: white;
     border: 1px solid #42ACA4;
     padding: 5px 10px 20px 20px;
-}  
+    display: none;
+}
+
+.dialog:after{
+	background: black;
+}
 
 #addAddressForm input[type=text]{
     display: block;

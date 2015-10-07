@@ -22,11 +22,11 @@ $(document).ready(function(){
     var mapDialog = document.getElementById('map');
     
     $('#addAddressButton').click(function(){
-        dialog.showModal();
+        $('#window').show();
     });
     
     $('#showMap').click(function(){
-        mapDialog.showModal();
+        $('#map').show();
 
         // Get the user's inputted address
         var person = document.getElementById( "personAddress" ).value;
@@ -37,7 +37,7 @@ $(document).ready(function(){
         var fullAddress = "<h3>" + person + "<br>" + phone + "<br>" + address + ", " + city + "</h3>";
         
         $('#deliveryAddress').html(fullAddress);
-        dialog.close();
+        $('#window').hide();
 
         // Make asynchronous call to Google geocoding API
         geocoder.geocode( { 'address': address }, function(results, status) {
@@ -52,15 +52,15 @@ $(document).ready(function(){
     });
     
     $('#exit').click(function(){
-        dialog.close();
+        $('#window').hide();
     });
     
     $('#exitMap').click(function(){
-        mapDialog.close();
+        $('#map').hide();
     });
     
     $('#saveMap').click(function(){
-        mapDialog.close();
+        $('#map').hide();
     });
     
     // Initialize and display a google map
