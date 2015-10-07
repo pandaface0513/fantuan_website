@@ -449,6 +449,61 @@ overflow: hidden;
 
 }
 
+.featuredContainer{
+	width: 100%;
+	height: auto;
+	margin-bottom: 5em;
+	margin-top: 1em;
+}
+
+.featuredRestaurant {
+
+width: 19%;
+margin-bottom: 2em;
+display: inline-block;
+margin-left: 4.5%;
+height: 6em;
+background-color: white;
+vertical-align: top;
+border-radius: 5%;
+overflow: hidden;
+
+}
+
+.featuredRestaurantInfo {
+	display: inline-block;
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 50%;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+	}
+
+	.featuredRestaurantImage{
+	height: 50%;
+	width: 33%;
+	margin-left: 5%;
+	margin-top: 8%;
+	vertical-align: middle;
+	
+	display: inline-block;
+}
+
+.featuredFood{
+	width: 18%;
+	margin-bottom: 2em;
+	display: inline-block;
+	margin-left: 5.4%;
+	height: 11em;
+	background-color: white;
+	vertical-align: top;
+	border-radius: 5%;
+	overflow: hidden;
+
+}
+
 .foodInfo{
 
 	display: inline-block;
@@ -905,12 +960,54 @@ display: inline-block;
 
 }
 
+.featureTopbar{
+
+	width: 100%;
+	height: auto;
+	
+}
+
+.featureIcon{
+
+	display: inline-block;
+	width: 15%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: auto;
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	vertical-align: middle;
+	
+}
+
+.featureIcon img{
+
+width: 25%;
+margin-left: 2%;
+
+
+}
+
+hr{
+color: white;
+width: 37%;
+border: white 1px solid;
+display: inline-block;
+vertical-align: middle;
+}
+
 .footer{
 
   width: 80%;
   margin-left: 15%;
   
   height: 400px;
+}
+
+#footer{
+
+	margin-bottom: 0;
 }
 
 .hoursContainer{
