@@ -264,6 +264,20 @@ background-color: rgba(255,255,255,0.5);
 	
 }
 
+.searchBar button{
+	
+	margin-top: 1em;
+	vertical-align: top;
+	height: 25px;
+	width: 40px;
+	
+	margin-left:0;
+	padding:0;
+	background-color: #42ACA4;
+	border: none;
+	
+}
+
 input.quantity{
     max-width: 2rem;
     background: none;
@@ -289,19 +303,7 @@ input.quantity{
     cursor: pointer;
 }
 
-.searchBar button{
-	
-	margin-top: 1em;
-	vertical-align: top;
-	height: 25px;
-	width: 40px;
-	
-	margin-left:0;
-	padding:0;
-	background-color: #42ACA4;
-	border: none;
-	
-}
+
 
 .locationFilter{
 	width:32.5%;
@@ -346,6 +348,11 @@ input.quantity{
 }
 
 .foodGridItem:hover{
+    background-color: dimgrey;
+    color: white;
+}
+
+.profileGridItem:hover{
     background-color: dimgrey;
     color: white;
 }
@@ -437,6 +444,25 @@ overflow: hidden;
     color: grey;
 }
 
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	
+	border-bottom: 25px solid #ECEDEC;
+	margin-left: 22%;
+	position: absolute;
+	margin-top: -1.35%;
+}
+
+
+#profileImage{
+	width:75%;
+	height: auto;
+	margin-left: 11%;
+}
+
 .foodGridItem{
 
 width: 40%;
@@ -449,6 +475,43 @@ vertical-align: top;
 border-radius: 5%;
 overflow: hidden;
 
+}
+
+.profileGridItem{
+
+width: 40%;
+margin-bottom: 2em;
+display: inline-block;
+margin-right: 5%;
+height: 7em;
+background-color: white;
+vertical-align: top;
+border-radius: 5%;
+overflow: hidden;
+
+}
+
+.profileInfo{
+
+	text-align: center;
+	width: 100%;
+	margin-top: 0.5em;
+	font-weight: bold;
+}
+
+.profileGridImage{
+	height: 50%;
+	width: 33%;
+	margin-left: 41%;
+	margin-top: 5%;
+	vertical-align: top;
+	
+	
+}
+
+.profileGridImage img{
+	width: auto;
+	height: auto;
 }
 
 .featuredContainer{
@@ -1233,4 +1296,128 @@ vertical-align: middle;
     margin-bottom: 0;
     width : 22rem; 	/* map width */
     height: 22rem;	/* map height */
+}
+
+.loginContainer{
+
+	width: 40%;
+	margin-left: 30%;
+	height: auto;
+	background-color: white;
+	margin-bottom: 10em;
+}
+
+.loginTitle{
+	width: 100%;
+	background-color: white;
+	height: 35px;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	
+}
+
+.loginTitle p{
+	padding-top: 4px;
+	color: #42ACA4;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin-left: 46%;
+    margin-right: 41%;
+    vertical-align: top;
+}
+
+.loginTitle img{
+	display: inline-block;
+	height: 75%;
+	
+	margin-top: 0.5%;
+}
+
+.loginSection{
+	display: inline-block;
+	width: 47%;
+	height: auto;
+	
+	vertical-align: top;
+}
+
+.loginLeft{
+	margin-left: 25%;
+	width: 50%;
+	height: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	color: #42ACA4;
+	font-weight: bold;
+
+}
+
+.loginLeft p{
+	margin-bottom: 1em;
+}
+
+.loginLeft img{
+	width: 90%;
+	height: auto;
+}
+
+.loginRight{
+	margin-left: 10%;
+	width: 90%;
+	height: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	color: #42ACA4;
+	font-weight: bold;
+	
+	
+}
+
+.loginRight p{
+	margin-bottom: 0.25em;
+	text-align: left;
+	color: grey;
+	margin-left: 5%;
+}
+
+.loginRight input[type=text]{
+	
+	margin-top: 0.5em;
+	vertical-align: top;
+	height: 25px;
+	margin-right: 5%;
+	display: inline-block;
+	margin-bottom: 2em;
+	margin-left: 5%;
+	
+}
+
+.loginRight button{
+	
+	margin-top: 0.5em;
+	vertical-align: top;
+	height: 25px;
+	width: 80px;
+	
+	margin-left:0;
+	padding:0;
+	background-color: #42ACA4;
+	border: none;
+	display: inline-block;
+	color: white;
+	
+}
+
+.buttonText{
+	padding-top: 0.5em;
+	text-align: center;
+	color: white;
+}
+
+#centerAlign{
+	text-align: center;
+	margin-bottom: 1em;
+	color: #42ACA4;
+	
 }
