@@ -14,11 +14,13 @@
     
 <body>
 
+<div id="page-cover"></div>
+    
 <nav>
     <p>
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
         <div class="navButtons">
-            <button type="button"><img src="img/user.png"/></button>
+            <a href="profile.html"><button type="button"><img src="img/user.png"/></button></a>
             <button type="button"><a href="checkout.html"><img src="img/cart.png"/>
                  <span id="cartCount">3</div></a>
             </button>
@@ -80,6 +82,72 @@
 	</div>
 
 	<div class="details">
+        
+        <div id="window" class="dialog">
+                <div class="subDetails" id="middleBox">
+
+                    <div class="boxTitle">
+                    <p>新送餐地址</p>
+                    </div>
+
+                    <form id="addAddressForm">
+                        <input id="personAddress" type="text" name="name" placeholder="请输入收货人姓名">
+                        <input id="phoneAddress" type="text" name="name" placeholder="请输入联系电话">
+                        <input id="cityAddress" type="text" name="name" placeholder="请选择你当前城市信息">
+                        <textarea id="mapAddress" placeholder="请输入详细地址, 如7000 Hazel St."></textarea>
+                    </form>
+
+		          </div>
+                <button class="dialogButton" id="exit">取消</button>
+                <button class="dialogButton" id="showMap">下一步</button>
+            </div>
+            
+            <div id="map" class="dialog">
+                 <div class="subDetails" id="middleBox">
+                    <!-- Dislay Google map here -->
+                    <div id='map-canvas' ></div>
+                </div>
+                 <button class="dialogButton" id="exitMap">取消</button>
+                 <button class="dialogButton" id="saveMap">保存</button>
+                
+            </div>
+
+
+                <div id="couponDialog" class="dialog">
+                 	<div class="subDetails" id="middleBox">
+
+                 		<div class="boxTitle">
+		                    <p>Coupon Code</p>
+		                    </div>
+
+                 		<form>
+                 			<ul>
+                 				<li>
+		                 			<input type="radio" name="coupon" value="a" checked>
+		                 			<div class="couponImage">
+		                 				<img src="img/10Coupon.PNG"/>
+		                 			</div>
+                 				</li>
+                 				<li>
+		                 			<input type="radio" name="coupon" value="b">
+		                 			<div class="couponImage">
+		                 				<img src="img/20Coupon.PNG"/>
+		                 			</div>
+                 				</li>
+                 				<li>
+		                 			<input type="radio"	name="coupon" value="c">
+		                 			<div class="couponImage">
+		                 				<img src="img/3OFF.PNG"/>
+		                 			</div>
+                 				</li>
+                 			</ul>
+                 		</form>
+                    	
+                	</div>
+	                <button class="dialogButton" id="exitCoupon">取消</button>
+	                <button class="dialogButton" id="saveCoupon">保存</button>
+	                
+            	</div>
 
 		<div class="subDetails" id="middleBox">
 
@@ -96,72 +164,6 @@
 		    </select>
             
             <button id="addAddressButton" type="button">+ 新地址</button>
-            
-            <div id="window" class="dialog">
-                <div class="subDetails" id="middleBox">
-
-                    <div class="boxTitle">
-                    <p>新送餐地址</p>
-                    </div>
-
-                    <form id="addAddressForm">
-                        <input id="personAddress" type="text" name="name" placeholder="请输入收货人姓名">
-                        <input id="phoneAddress" type="text" name="name" placeholder="请输入联系电话">
-                        <input id="cityAddress" type="text" name="name" placeholder="请选择你当前城市信息">
-                        <textarea id="mapAddress" placeholder="请输入详细地址, 如7000 Hazel St."></textarea>
-                    </form>
-
-		          </div>
-                <button id="exit">取消</button>
-                <button id="showMap">Next</button>
-            </div>
-            
-            <div id="map" class="dialog">
-                 <div class="subDetails" id="middleBox">
-                    <!-- Dislay Google map here -->
-                    <div id='map-canvas' ></div>
-                </div>
-                 <button id="exitMap">取消</button>
-                 <button id="saveMap">保存</button>
-                
-            </div>
-
-
-                <div id="couponDialog" class="dialog">
-                 	<div class="subDetails" id="middleBox">
-
-                 		<div class="boxTitle">
-		                    <p>Coupon Code</p>
-		                    </div>
-
-                 		<form>
-                 			<ul>
-                 				<li>
-		                 			<input type="radio" name="address" value="a" checked>
-		                 			<div class="deliveryAddress">
-		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
-		                 			</div>
-                 				</li>
-                 				<li>
-		                 			<input type="radio" name="address" value="b">
-		                 			<div class="deliveryAddress">
-		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
-		                 			</div>
-                 				</li>
-                 				<li>
-		                 			<input type="radio"	name="address" value="c">
-		                 			<div class="deliveryAddress">
-		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
-		                 			</div>
-                 				</li>
-                 			</ul>
-                 		</form>
-                    	
-                	</div>
-	                <button id="exitCoupon">取消</button>
-	                <button id="saveCoupon">保存</button>
-	                
-            	</div>
             
             <div id="deliveryAddress">
 
@@ -248,14 +250,15 @@
 			<p class="priceAmount">+</p>
 			<p class="priceAmount" id="tax">$2.44</p>
 
-
-
 			</div>
 
 			<div class="priceTotal">
-			<h2>= $49.85 (建议小费至少10%)</h2>
-
+			<h2>= $49.85</h2>
 			</div>
+            
+                            
+            <p class="priceAmount" id="discount">Discount</p>
+            
 		</div>
         
         <button id="submitButton" type="button">提交订单</button>

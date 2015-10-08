@@ -8,12 +8,16 @@
     <!-- Bootstrap -->
     <link href='css/main.css' type='text/css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,800' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		<!-- Google Maps API -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	<!-- Google CDN for jQuery -->
 
     
 </head>
     
 <body>
 
+<div id="page-cover"></div>
+    
 <nav>
     <p>
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
@@ -75,6 +79,10 @@
             <div class="details">
                 
             <div id="window" class="dialog">
+                
+                <div class="boxTitle">
+                    <p>新地址  </p>
+                </div>
                 <div class="subDetails" id="middleBox">
 
                     <form id="addAddressForm">
@@ -85,17 +93,17 @@
                     </form>
 
 		          </div>
-                <button id="exit">取消</button>
-                <button id="showMap">下一步</button>
+                <button class="dialogButton" id="exit">取消</button>
+                <button class="dialogButton" id="showMap">下一步</button>
             </div>
             
             <div id="map" class="dialog">
                  <div class="subDetails" id="middleBox">
                     <!-- Dislay Google map here -->
-                    <div id='map-canvas' ></div>
+                    <div id='map-canvas'></div>
                 </div>
-                 <button id="exitMap">取消</button>
-                 <button id="saveMap">保存</button>
+                 <button class="dialogButton" id="exitMap">取消</button>
+                 <button class="dialogButton" id="saveMap">保存</button>
                 
             </div>
 
@@ -277,14 +285,10 @@
 
 </div>
 
-
-
-
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		<!-- Google Maps API -->
-<script src="js/jquery-2.1.4.min.js"></script>
+<!--<script src="js/jquery-2.1.4.min.js"></script>-->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!--<script src="js/bootstrap.min.js"></script>-->
-<script src="js/bootstrap-number-input.js"></script>
+<!--<script src="js/bootstrap-number-input.js"></script>-->
 <script src="js/address.js"></script>
     
     

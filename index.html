@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fantuan</title>
-    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link href='css/main.css' type='text/css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,800' rel='stylesheet' type='text/css'>
 
@@ -14,12 +15,13 @@
     
 <body>
 
+<div id="page-cover"></div>
+    
 <nav>
     <p>
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
         <div class="navButtons">
-            <a href="profile.html"><button type="button"><img src="img/user.png"/></button></a>
-            <a href="checkout.html"><button type="button"><img src="img/cart.png"/>
+            <button id="loginButton" type="button">登陆</button>
             </button></a>
         </div>
     </p>
@@ -27,44 +29,80 @@
 
 
 <div class="col1of1">
+    
+      <div id="loginDialog" class="loginContainer">
+
+        <div class="loginTitle">
+                <p><strong>用户登陆</strong></p>
+                <img class="closeButton" src="img/x.png">
+        </div>
+
+        <div class="loginSection">
+            <div class="loginLeft">
+            <p><strong>登陆方式 1 ：微信扫一扫</strong></p>
+            <img src="img/qrcode.jpg">
+            </div>
+        </div>
+
+
+
+        <div class="loginSection">
+            <div class="loginRight">
+            <p id="centerAlign"><strong>登陆方式 2 ：手机验证</strong></p>
+            <p>手机号码：</p>
+            <input type="text" placeholder="" name="firstname">
+        <button type="button"><p style="text-align: center; color: white;">获取验证码</p></button>
+            <p>验证码：</p>
+        <input type="text" placeholder="" name="firstname">
+        <button type="button"><p style="text-align: center; color: white;" >提交</p></button>
+            </div>
+        </div>
+
+    </div>
 
 <div class="mapContainer">
+    
 
 	<div class="iconContainer">
 		
 		<div class="landingIcons">
 			
 			<div class="landingIcon">
-				<img src="img/creditcard.png">
-				<p>Test</p>
+				<img src="img/creditcard.png" >
+				<p>餐到刷卡</p>
+                <div class="arrow-up">
+                </div>
 			</div>
-
 
 			<div class="landingIcon">
 				<img src="img/location.png">
-				<p>Test</p>
+				<p>实时定位</p>
+                <div class="arrow-up">
+                </div>
 			</div>
 			<div class="landingIcon">
 				<img src="img/food.png">
-				<p>Test</p>
+				<p>专业保温</p>
+                <div class="arrow-up">
+                </div>
 			</div>
 			<div class="landingIcon">
 				<img src="img/price.png">
-				<p>Test</p>
+				<p>零元起送</p>
+                <div class="arrow-up">
+                </div>
 			</div>
 
 		</div>
-		<div class="arrow-up">
-
-				</div>
 	</div>
 
 
 </div>
+    
 <div class="selectionText">
-	<h4>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test </h4>
-	<h4>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test </h4>
-	</div>
+	<h4>这里是这条特色的解释。这里是这条特色的解释。这里是这条特色的</h4>
+	<h4>解释。这里是这条特色的解释。这里是这条特色的解释。</h4>
+</div>
 
 </div>
 
@@ -75,18 +113,17 @@
 		<hr>
 
 		<div class="featureIcon">
-		<h3>Test</h3>
+		<h3>推荐餐厅</h3>
 		<img src="img/fork.png">
 		</div>
 
 		<hr>
 
 	</div>
-
-
+    
 	<div class="featuredContainer">
-
-
+        
+        <div class="slider">
 		<div class="featuredRestaurant">
 
         	 <div class="featuredRestaurantImage">
@@ -94,7 +131,7 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>Church's</p>
         	</div>
 
 		</div>
@@ -106,7 +143,8 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>宝妈
+</p>
         	</div>
 
 		</div>
@@ -118,7 +156,7 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>利源冰店</p>
         	</div>
 
 		</div>
@@ -130,7 +168,31 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>利源冰店</p>
+        	</div>
+
+		</div>
+
+            <a href="restaurantDetails.html"><div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+                <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>老东北</p>
+        	</div>
+
+		</div></a>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>大头仔</p>
         	</div>
 
 		</div>
@@ -142,7 +204,7 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>珍珠小馆</p>
         	</div>
 
 		</div>
@@ -154,7 +216,21 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>珍珠小馆</p>
+        	</div>
+
+		</div>
+        </div>
+        
+                <div class="slider">
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>Church's</p>
         	</div>
 
 		</div>
@@ -166,7 +242,8 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>宝妈
+</p>
         	</div>
 
 		</div>
@@ -178,10 +255,170 @@
             </div>
 
         	<div class="featuredRestaurantInfo">
-        		<p>糖醋排骨</p>
+        		<p>利源冰店</p>
         	</div>
 
 		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>利源冰店</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>老东北</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>大头仔</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>珍珠小馆</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>珍珠小馆</p>
+        	</div>
+
+		</div>
+        </div>
+        
+                <div class="slider">
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>Church's</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>宝妈
+</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>利源冰店</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>利源冰店</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>老东北</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>大头仔</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>珍珠小馆</p>
+        	</div>
+
+		</div>
+
+		<div class="featuredRestaurant">
+
+        	 <div class="featuredRestaurantImage">
+            <img src="img/restaurant.jpg">
+            </div>
+
+        	<div class="featuredRestaurantInfo">
+        		<p>珍珠小馆</p>
+        	</div>
+
+		</div>
+        </div>
 
 
 
@@ -193,7 +430,7 @@
 		<hr>
 
 		<div class="featureIcon">
-		<h3>Test</h3>
+		<h3>热门美食</h3>
 		<img src="img/bowl.png">
 		</div>
 
@@ -203,167 +440,276 @@
 	</div>
 
 	<div class="featuredContainer">
+    
+        <div class="slider">        
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
 
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+            <div class="featuredFood">
+                 <div class="gridImage">
+                <img src="img/bones.PNG">
+                </div>
+
+                 <div class="gridText">
+                <p>招牌酱大骨</p>
+                </div>
+                <div class="gridTextRight">
+                <p>本周订单:75</p>
+                </div>
+            </div>
+
+        </div>
+
+    
+    <div class="slider">        
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
 
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
 
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
 
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
 
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
 
 		<div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
-
-		<div class="featuredFood">
+        
+        <div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
-
-		<div class="featuredFood">
+        
+        <div class="featuredFood">
 			 <div class="gridImage">
-            <img src="img/sample.jpg">
+            <img src="img/bones.PNG">
             </div>
 
              <div class="gridText">
-            <p>沸点臭臭锅</p>
+            <p>招牌酱大骨</p>
             </div>
             <div class="gridTextRight">
-            <p>营业中</p>
+            <p>本周订单:75</p>
             </div>
 		</div>
-
-	</div>
-
+    </div>
 </div>
 
 </div>
 
 <div class="col1of1" id="landingPageBottom">
 
+    <span id="content">
+        <div class="blogList">
 
-	<div class="blogList">
-		
-		<div class="blogListItem">
-			<h4>Test</h4>
-		</div>
+            <div class="blogListItem">
+                <h3>美食周刊</h3>
+            </div>
 
-		<div class="blogListItem">
-		<h4>Test</h4>
-	</div>
+            <div class="blogListItem selected">
+              <h4>第25期</h4>
+            </div>
 
-	<div class="blogListItem">
-		<h4>Test</h4>
-	</div>
+            <div class="blogListItem">
+                <h4>第24期</h4>
+            </div>
 
-	<div class="blogListItem">
-		<h4>Test</h4>
-	</div>
+            <div class="blogListItem">
+                <h4>第23期</h4>
+            </div>
 
-	<div class="blogListItem">
-		<h4>Test</h4>
-	</div>
+            <div id="moreBlog" class="blogListItem">
+                <h6>查看往期精彩内容</h6>
+            </div>
 
-	<div class="blogListItem">
-		<h4>Test</h4>
-	</div>
+        </div>
 
-	</div>
+        <span id="blogPosts">
+            <div class="blogPost">
+                <img src="img/square.jpg">
+                <p>鱼汤米线哪家强？</p>
+            </div>
 
-	<div class="blogPost">
-	<img src="img/square.jpg">
-	<p>Test</p>
-	</div>
+            <div class="blogPost">
+                <img src="img/square.jpg">
+                <p>名气不大味道惊人的餐厅</p>
+            </div>
 
-	<div class="blogPost">
-	<img src="img/square.jpg">
-	<p>Test</p>
-	</div>
-	
-	<div class="blogPost">
-	<img src="img/square.jpg">
-	<p>Test</p>
-	</div>
+            <div class="blogPost">
+                <img src="img/square.jpg">
+                <p>丽晶美食大搜罗（上）</p>
+            </div>
 
-	<div class="blogPost">
-	<img src="img/square.jpg">
-	<p>Test</p>
-	</div>
+            <div class="blogPost">
+                <img src="img/square.jpg">
+                <p>丽晶美食大搜罗（下）</p>
+            </div>
+
+        </span>
+    </span>
+
+
 </div>
 
 <div class="col1of1" id="footer">
@@ -411,42 +757,13 @@
 
 </div>
 
-<div class="loginContainer">
-
-	<div class="loginTitle">
-            <p><strong>订餐详情</strong></p>
-            <img src="img/x.png">
-	</div>
-
-	<div class="loginSection">
-		<div class="loginLeft">
-		<p><strong>QR Code</strong></p>
-		<img src="img/qrcode.jpg">
-		</div>
-	</div>
-
-	
-
-	<div class="loginSection">
-		<div class="loginRight">
-		<p id="centerAlign"><strong>QR Code</strong></p>
-		<p>Title 1</p>
-		<input type="text" placeholder="搜索餐厅" name="firstname">
-	<button type="button"><p style="text-align: center; color: white;">Button 1</p></button>
-		<p>Title 1</p>
-	<input type="text" placeholder="搜索餐厅" name="firstname">
-	<button type="button"><p style="text-align: center; color: white;" >Button 2</p></button>
-		</div>
-	</div>
-
-</div>
-
 
 
 
 
 <script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/about.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/index.js"></script>
     
     
 </body>

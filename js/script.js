@@ -25,17 +25,21 @@ $(document).ready(function(){
     var couponDialog = document.getElementById('couponDialog');
     
     $('#showCoupon').click(function(){
+        $("#page-cover").css("opacity",0.6).fadeIn(300);
+        $('#couponDialog').css({'position':'aboslute','z-index':9999});
         $('#couponDialog').show();
     });
 
     $('#exitCoupon').click(function(){
         $('#couponDialog').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
 
     $('#saveCoupon').click(function(){
         $('#couponDialog').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
 
-        var selected = $('input:radio[name=address]:checked').val();
+        var selected = $('input:radio[name=coupon]:checked').val();
 
         if(selected == 'a'){
             //selectedAddress = addressA;
@@ -43,12 +47,12 @@ $(document).ready(function(){
             $('#couponName').html("10% off");
         }else if(selected == 'b'){
             //selectedAddress = addressB;
-            discount = sum * 0.3;
-            $('#couponName').html("30% off");
+            discount = sum * 0.2;
+            $('#couponName').html("20% off");
         }else{
             //selectedAddress = addressC;
-            discount = sum * 0.5;
-            $('#couponName').html("50% off"); 
+            discount = 3 * 1;
+            $('#couponName').html("$3 off"); 
         }
         
         $('#deliveryAddress').html(selectedAddress);
@@ -58,10 +62,15 @@ $(document).ready(function(){
 
     $('#addAddressButton').click(function(){
         $('#window').show();
+        $("#page-cover").css("opacity",0.6).fadeIn(300);
+        $('#window').css({'position':'aboslute','z-index':9999});
     });
     
     $('#showMap').click(function(){
         $('#map').show();
+        google.maps.event.trigger(map, 'resize')
+        $("#page-cover").css("opacity",0.6).fadeIn(300);
+        $('#map').css({'position':'aboslute','z-index':9999});
 
         // Get the user's inputted address
         var person = document.getElementById( "personAddress" ).value;
@@ -88,14 +97,17 @@ $(document).ready(function(){
     
     $('#exit').click(function(){
         $('#window').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
     
     $('#exitMap').click(function(){
         $('#map').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
     
     $('#saveMap').click(function(){
         $('#map').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
     
     // Initialize and display a google map
@@ -187,6 +199,7 @@ function updateCart(){
         
     total = total.toFixed(2);
     
+    $('#discount').html("- $" + discount.toFixed(2));
     $('.priceTotal').html("<h2>= $" + total + " (建议小费至少10%)</h2>");
     
     var count = boneValue * 1 + tofuValue * 1 + mushroomValue * 1;

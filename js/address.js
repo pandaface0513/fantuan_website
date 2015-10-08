@@ -18,15 +18,16 @@ $(document).ready(function(){
     //show map
     var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object
     
-    var dialog = document.getElementById('window');
-    var mapDialog = document.getElementById('map');
-    
     $('#addAddressButtonHere').click(function(){
+        $("#page-cover").css("opacity",0.6).fadeIn(300);
+        $('#window').css({'position':'aboslute','z-index':9999});
         $('#window').show();
     });
     
     $('#showMap').click(function(){
         $('#map').show();
+        google.maps.event.trigger(map, 'resize')
+        $('#map').css({'position':'aboslute','z-index':9999});
 
         // Get the user's inputted address
         var person = document.getElementById( "personAddress" ).value;
@@ -53,20 +54,24 @@ $(document).ready(function(){
     
     $('#exit').click(function(){
         $('#window').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
     
     $('#exitMap').click(function(){
         $('#map').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
     });
     
     $('#saveMap').click(function(){
         $('#map').hide();
+        $("#page-cover").css("opacity",0.6).fadeOut(300);
         
         $('#addresses').html(fullAddress + $('#addresses').html());
         
     });
     
-    
+    //$('#map').hide();
+
 });
 
 // Show the location (address) on the map.
