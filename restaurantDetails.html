@@ -14,14 +14,16 @@
     
 <body>
 
+<div id="page-cover"></div>
+    
 <nav>
     <p>
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
         <div class="navButtons">
-            <button type="button"><img src="img/user.png"/></button>
-             <button type="button"><a href="checkout.html"><img src="img/cart.png"/>
-                 <span id="cartCount">3</div></a>
-            </button>
+            <a href="profile.html"><button type="button"><img src="img/user.png"/></button></a>
+             <a href="checkout.html"><button type="button"><img src="img/cart.png"/>
+                 <span id="cartCount">3</div>
+            </button></a>
         </div>
     </p>
 </nav>
@@ -35,30 +37,32 @@
             <p><strong>订餐详情</strong></p>
         </div>
         
-        <div class="cart">
+        <div class="cart" id="theCart">
             <h4 class="greenText">老东北</h4>
-
-            <li class="orderItem">
-                <p>招牌酱大骨（大)<br>
-                  $12.95</p>
-                <div class="right">
-                    <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="99">
-                </div>
-            </li>
-                 <li class="orderItem">
-                <p>老汤干豆腐<br>
-                  $9.95</p>
-                     <div class="right">
-                    <input class="quantity" id="tofuCounter" type="number" name="bone" value="1" min="1" max="99">
-                </div>
-            </li>
-                 <li class="orderItem">
-                <p>小鸡炖蘑菇<br>
-                  $15.95</p>
-                     <div class="right">
-                    <input class="quantity" id="mushroomCounter" type="number" name="bone" value="1" min="1" max="99">
-                </div>
-            </li>
+            
+            <span id="cartItems">
+                <li class="orderItem">
+                    <p>招牌酱大骨（大)<br>
+                      $12.95</p>
+                    <div class="right">
+                        <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="99">
+                    </div>
+                </li>
+                <li class="orderItem">
+                    <p>老汤干豆腐<br>
+                      $9.95</p>
+                         <div class="right">
+                        <input class="quantity" id="tofuCounter" type="number" name="bone" value="1" min="1" max="99">
+                    </div>
+                </li>
+                <li class="orderItem">
+                    <p>小鸡炖蘑菇<br>
+                      $15.95</p>
+                         <div class="right">
+                        <input class="quantity" id="mushroomCounter" type="number" name="bone" value="1" min="1" max="99">
+                    </div>
+                </li>
+            </span>
 
             <h4 id="sum" class="greenText">餐费总额：$38.85</h4>
             <button id="goCartButton" type="button" onclick="window.location='checkout.html'">去结账</button>
@@ -159,6 +163,69 @@
     </div>
 
     <div class="locations">
+        
+        <div id="foodDetails" class="dialog">
+                <div class="subDetails" id="middleBox">
+                    
+                                        
+                    <div class="foodPic"><img src="img/pizza.jpg"></div>
+                    
+                    <div class="boxTitle">
+                    <p>Chicken Caesar 烤鸡胸，碎培根，烤大蒜，奶油
+Alfredo酱，披萨奶酪</p>
+                    </div>
+                    
+                    <div class="foodSubDetails">
+                        <p>size: </p>
+                        <div class="foodFiltersButtons">
+                            <div class="sizeFiltersButton selected">
+                                <p>个人份</p>
+                            </div>
+
+                            <div class="sizeFiltersButton">
+                                <p>小</p>
+                            </div>
+
+                            <div class="sizeFiltersButton">
+                                <p>中</p>
+                            </div>
+
+                            <div class="sizeFiltersButton">
+                                <p>大</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodSubDetails">
+                        <p>披萨类型: </p>
+                        <div class="foodFiltersButtons">
+                            <div class="topFiltersButton selected">
+                                <p>铁盘 Pan Pizza</p>
+                            </div>
+
+                            <div class="topFiltersButton">
+                                <p>手抛 Hand Tossed</p>
+                            </div>
+
+                            <div class="topFiltersButton">
+                                <p>薄脆 Thin & Crispy</p>
+                            </div>
+
+                            <div class="topFiltersButton">
+                                <p>芝边 Stuffed Crust</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodSubDetails">
+                        <p>价格： $ 8.99</p>
+                    </div>
+
+
+		          </div>
+                <button class="dialogButton" id="exitFood">取消</button>
+                <button class="dialogButton" id="addFood">加入购物车</button>
+            </div>
 
         
 
@@ -171,21 +238,21 @@
 
 
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
         </div>
 
-        <div class="foodGridItem">
+        <div class="foodGridItem specialPop">
 
         	<div class="foodInfo">
-        		<p>糖醋排骨</p>
-        	<p class ="greenText">$8.99</p>
+        		<p>Pizza</p>
+        	   <p class ="greenText">$8.99</p>
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -200,7 +267,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -214,7 +281,7 @@
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -229,7 +296,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -243,7 +310,7 @@
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -258,7 +325,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -272,7 +339,7 @@
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -287,7 +354,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -301,7 +368,7 @@
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -316,7 +383,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -326,11 +393,11 @@
 
         	<div class="foodInfo">
         	<p>孜然牛肉</p>
-        	<p class ="greenText">$11.99</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -345,7 +412,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -359,7 +426,7 @@
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -369,12 +436,12 @@
 
         <div class="foodInfo">
         	<p>酱爆鸡丁</p>
-        	<p class ="greenText">$7.99</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -383,12 +450,12 @@
         <div class="foodGridItem">
 
         	<div class="foodInfo">
-        	<p>Top Text</p>
-        	<p class ="greenText">Bottom Text</p>
+        	<p>酱爆鸡丁</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -404,7 +471,7 @@
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -414,11 +481,11 @@
 
         	<div class="foodInfo">
         	<p>辣子鸡</p>
-        	<p class ="greenText">$15.99</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              
@@ -429,12 +496,12 @@
 
         <div class="foodInfo">
         	<p>红烧豆腐</p>
-        	<p class ="greenText">$10.99</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
 
         	
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
           
@@ -444,11 +511,11 @@
 
         	<div class="foodInfo">
         	<p>西红柿炒鸡蛋</p>
-        	<p class ="greenText">$9.99</p>
+        	<p class ="greenText">$8.99</p>
         	</div>
             
             <div class="foodGridImage">
-            <img src="img/restaurant.jpg">
+                    <img data-other-src="img/whiteCart.png" src="img/restaurant.jpg">
             </div>
 
              

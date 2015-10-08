@@ -341,7 +341,7 @@ input.quantity{
     cursor: pointer;
 }
 
-.cityButton.selected, .typeButton.selected{
+.cityButton.selected, .typeButton.selected, foodFiltersButton.selected{
     border-color: #42ACA4;
     border-width: 0.25rem;
     border-style: solid;
@@ -350,6 +350,16 @@ input.quantity{
 .foodGridItem:hover{
     background-color: dimgrey;
     color: white;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.foodGridItem:hover img{
+    max-width: 100%;
+    width: auto;
+    height: 2rem;
+    margin-top: 5%;
+    float: right;
 }
 
 .profileGridItem:hover{
@@ -360,7 +370,6 @@ input.quantity{
 .foodFilter.selected{
     background: white;
 }
-
 
 .typeButton{
     width:34%;
@@ -1209,6 +1218,18 @@ vertical-align: middle;
     display: none;
 }
 
+.dialog button{
+    margin-top: 1.5em;
+	vertical-align: top;
+	height: 30px;
+    color: white;
+	
+	margin-left:0;
+	padding:0;
+	background-color: #42ACA4;
+	border: none;
+}
+
 #couponDialog ul{
 	list-style: none;
 }
@@ -1249,7 +1270,7 @@ vertical-align: middle;
     margin-left: 6%;
 }
 
-#exit, #showMap, #saveMap, #exitMap{
+.dialogButton{
     color: white;
     margin-left: 6%;
     width: 37%;
@@ -1489,4 +1510,82 @@ vertical-align: middle;
 	margin-bottom: 1em;
 	color: #42ACA4;
 	
+}
+
+#foodDetails{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#foodDetails .foodPic img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+#foodDetails .foodSubDetails{
+    display: block;
+    margin: 5%;
+}
+
+.foodFilters{
+	height:80%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left:10%; 
+	width: 100%;
+}
+
+
+.topFiltersButton{
+    width: auto;
+    margin: 0.5rem;
+    padding: 0.25rem;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    
+    border-color: grey;
+    border-width: 0.1rem;
+    border-style: solid;
+}
+
+.sizeFiltersButton{
+    width: auto;
+    margin: 0.5rem;
+    padding: 0.25rem;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    
+    border-color: grey;
+    border-width: 0.1rem;
+    border-style: solid;
+}
+
+.topFiltersButton.selected, .sizeFiltersButton.selected{
+    border-color: #42ACA4;
+    border-width: 0.2rem;
+}
+
+#page-cover {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+button{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.input-group-btn button{
+    vertical-align: top;
 }
