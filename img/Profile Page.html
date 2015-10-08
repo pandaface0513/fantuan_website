@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <!-- Bootstrap -->
+    <link href="Profile%20Page_files/main.css" type="text/css" rel="stylesheet">
+    <link href="Profile%20Page_files/css.css" rel="stylesheet" type="text/css">
+
+    
+<script style="" src="Profile%20Page_files/common.js" charset="UTF-8" type="text/javascript"></script><script src="Profile%20Page_files/util.js" charset="UTF-8" type="text/javascript"></script><script src="Profile%20Page_files/stats.js" charset="UTF-8" type="text/javascript"></script></head>
+    
+<body>
+
+<nav>
+    <p>
+    </p><div class="logo"><img src="Profile%20Page_files/fantuanLogo.png"><p>大温饭团</p></div>
+        <div class="navButtons">
+            <button type="button"><img src="Profile%20Page_files/user.png"></button>
+            <a href="file:///C:/Users/Henry/Documents/GitHub/fantuan_website/checkout.html"><button type="button"><img src="Profile%20Page_files/cart.png">
+            </button></a>
+        </div>
+    <p></p>
+</nav>
+
+
+<div class="topBar">
+
+	<div class="searchBar">
+	<p id="black"> 用户资料</p>
+	
+	</div>
+
+
+</div>
+
+<div class="col7of10">
+
+    <div class="locationFilter">
+
+        <div class="city">
+
+            <div class="boxTitle">
+                <p><strong>示例用户</strong></p>
+
+
+
+            </div>
+
+           <div class="restaurantPreview">
+                
+                	<div class="previewImage" id="profileImage">
+                		<img src="Profile%20Page_files/1.jpg">
+                	</div>
+
+                	<div class="previewInfo">
+                	<p>用户号码：24889567601</p>
+                    <p>用户昵称：Betty_girl01</p>
+                    <p>用户评分：56</p>
+					<p>联系电话：(778) 300-1687</p>
+                	</div>
+               
+                </div>
+
+
+
+        </div>
+
+    </div>
+
+        <div class="locations">
+            
+            <div class="details">
+                
+            <div id="window" class="dialog">
+                <div class="subDetails" id="middleBox">
+
+                    <div class="boxTitle">
+                    <p>新送餐地址</p>
+                    </div>
+
+                    <form id="addAddressForm">
+                        <input value="Henry Lo" id="personAddress" name="name" placeholder="请输入收货人姓名" type="text">
+                        <input value="Henry Lo" id="phoneAddress" name="name" placeholder="请输入联系电话" type="text">
+                        <input value="Henry Lo" id="cityAddress" name="name" placeholder="请选择你当前城市信息" type="text">
+                        <textarea id="mapAddress" placeholder="请输入详细地址, 如7000 Hazel St.">17420 61A ave, Surrey, B.C. </textarea>
+                    </form>
+
+		          </div>
+                <button id="exit">取消</button>
+                <button id="showMap">下一步</button>
+            </div>
+            
+            <div id="map" class="dialog">
+                 <div class="subDetails" id="middleBox">
+                    <!-- Dislay Google map here -->
+                    <div id="map-canvas"></div>
+                </div>
+                 <button id="exitMap">取消</button>
+                 <button id="saveMap">保存</button>
+                
+            </div>
+
+                <div class="subDetails" id="addressList">
+                    
+                    <div class="boxTitle">
+                        <p>地址管理</p>
+                    </div>
+                    
+                    <span id="addresses">
+                        <div class="subAddressBox">
+                            <div class="boxTitle">
+                                <p>Address A </p><p class="orange"> 778-239-9269</p>
+                            </div>
+                            <div class="listdeliveryAddress">
+                               <br>17420 61A ave, Surrey, B.C.
+                            </div>
+                            <input checked="checked" name="address" value="c" type="radio">送到该位置
+                        </div>
+
+                        <div class="subAddressBox">
+                                <div class="boxTitle">
+                                    <p>Address B </p><p class="orange"> 778-239-9269</p>
+                                </div>
+                                <div class="listdeliveryAddress">
+                                   <br>17420 61A ave, Surrey, B.C.
+                                </div>
+                                <input name="address" value="c" type="radio">送到该位置
+                        </div>
+
+                        <div class="subAddressBox">
+                            <div class="boxTitle">
+                                <p>Address C </p><p class="orange"> 778-239-9269</p>
+                            </div>
+                            <div class="listdeliveryAddress">
+                               <br>17420 61A ave, Surrey, B.C.
+                            </div>
+                            <input name="address" value="c" type="radio">送到该位置
+                         </div>
+                    </span>
+                    
+
+    
+                    <button id="addAddressButtonHere" type="button">+ 新地址</button>
+    
+                </div>
+            </div>
+
+<!--       <div class="profileGridItem">
+
+
+        	 <div class="profileGridImage">
+            <img src="img/coupon.png">
+            </div>
+
+        	<div class="profileInfo">
+        	<p>我的订单</p>
+        	
+        	</div>
+            
+           
+
+             
+        </div>
+
+        <div class="profileGridItem">
+
+
+        	 <div class="profileGridImage">
+            <img src="img/pin.png">
+            </div>
+
+        	<div class="profileInfo">
+        	<p>我的优惠</p>
+        	
+        	</div>
+            
+           
+
+             
+        </div>
+
+        <div class="profileGridItem">
+
+
+        	 <div class="profileGridImage">
+            <img src="img/profile.png">
+            </div>
+
+        	<div class="profileInfo">
+        	<p>地址管理</p>
+        	
+        	</div>
+            
+           
+
+             
+        </div>
+
+         <div class="profileGridItem">
+
+
+        	 <div class="profileGridImage">
+            <img src="img/trophy.png">
+            </div>
+
+        	<div class="profileInfo">
+        	<p>详细信息</p>
+        	
+        	</div>
+            
+           
+
+             
+        </div>
+            
+                     <div class="profileGridItem">
+
+
+        	 <div class="profileGridImage">
+            <img src="img/star.png">
+            </div>
+
+        	<div class="profileInfo">
+        	<p>促销活动</p>
+        	
+        	</div>
+            
+           
+
+             
+        </div>  -->
+        
+</div>
+</div>
+
+<div class="col1of1" id="footer">
+	<div class="footer">
+		<div class="hoursContainer">
+            <div class="hoursImage">
+                <img src="Profile%20Page_files/clock.png">
+            </div>
+			<div class="hours">
+				<p>营业时间<br>
+				11am-11:30pm</p>
+				<p>联系电话<br>
+				778-788-3875</p>
+			</div>
+
+		</div>
+		
+
+		<div class="footerInfo">
+			<h2>关于我们</h2>
+			
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
+		</div>
+
+		<div class="footerInfo">
+			<h2>联系我们</h2>
+			
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
+		</div>
+
+
+<div class="footerInfo">
+			<h2>疑问解答</h2>
+
+			<p>小标题1</p>
+			<p>小标题2</p>
+			<p>小标题3</p>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+<script src="Profile%20Page_files/js"></script>		<!-- Google Maps API -->
+<script src="Profile%20Page_files/jquery-2.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="Profile%20Page_files/bootstrap-number-input.js"></script>
+<script src="Profile%20Page_files/address.js"></script>
+    
+    
+
+
+</body></html>

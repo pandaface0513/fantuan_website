@@ -18,7 +18,7 @@
     <p>
     <div class="logo"><img src="img/fantuanLogo.png"/><p>大温饭团</p></div>
         <div class="navButtons">
-            <button type="button"><img src="img/user.png"/></button>
+            <a href="profile.html"><button type="button"><img src="img/user.png"/></button></a>
             <a href="checkout.html"><button type="button"><img src="img/cart.png"/>
             </button></a>
         </div>
@@ -71,8 +71,84 @@
     </div>
 
         <div class="locations">
+            
+            <div class="details">
+                
+            <div id="window" class="dialog">
+                <div class="subDetails" id="middleBox">
 
-       <div class="profileGridItem">
+                    <div class="boxTitle">
+                    <p>新送餐地址</p>
+                    </div>
+
+                    <form id="addAddressForm">
+                        <input id="personAddress" type="text" name="name" placeholder="请输入收货人姓名">
+                        <input id="phoneAddress" type="text" name="name" placeholder="请输入联系电话">
+                        <input id="cityAddress" type="text" name="name" placeholder="请选择你当前城市信息">
+                        <textarea id="mapAddress" placeholder="请输入详细地址, 如7000 Hazel St."></textarea>
+                    </form>
+
+		          </div>
+                <button id="exit">取消</button>
+                <button id="showMap">下一步</button>
+            </div>
+            
+            <div id="map" class="dialog">
+                 <div class="subDetails" id="middleBox">
+                    <!-- Dislay Google map here -->
+                    <div id='map-canvas' ></div>
+                </div>
+                 <button id="exitMap">取消</button>
+                 <button id="saveMap">保存</button>
+                
+            </div>
+
+                <div class="subDetails" id="addressList">
+                    
+                    <div class="boxTitle">
+                        <p>地址管理</p>
+                    </div>
+                    
+                    <span id="addresses">
+                        <div class="subAddressBox">
+                            <div class="boxTitle">
+                                <p>Address A </p><p class="orange"> 778-239-9269</p>
+                            </div>
+                            <div class="listdeliveryAddress">
+                               <br>17420 61A ave, Surrey, B.C.</h3>
+                            </div>
+                            <input type="radio"	name="address" value="c">送到该位置
+                        </div>
+
+                        <div class="subAddressBox">
+                                <div class="boxTitle">
+                                    <p>Address B </p><p class="orange"> 778-239-9269</p>
+                                </div>
+                                <div class="listdeliveryAddress">
+                                   <br>17420 61A ave, Surrey, B.C.</h3>
+                                </div>
+                                <input type="radio"	name="address" value="c">送到该位置
+                        </div>
+
+                        <div class="subAddressBox">
+                            <div class="boxTitle">
+                                <p>Address C </p><p class="orange"> 778-239-9269</p>
+                            </div>
+                            <div class="listdeliveryAddress">
+                               <br>17420 61A ave, Surrey, B.C.</h3>
+                            </div>
+                            <input type="radio"	name="address" value="c">送到该位置
+                         </div>
+                    </span>
+                    
+
+    
+                    <button id="addAddressButtonHere" type="button">+ 新地址</button>
+    
+                </div>
+            </div>
+
+<!--       <div class="profileGridItem">
 
 
         	 <div class="profileGridImage">
@@ -107,7 +183,7 @@
         </div>
 
         <div class="profileGridItem">
-            <a href="address.html">
+
 
         	 <div class="profileGridImage">
             <img src="img/profile.png">
@@ -117,8 +193,6 @@
         	<p>地址管理</p>
         	
         	</div>
-            
-            </a>
             
            
 
@@ -157,7 +231,7 @@
            
 
              
-        </div>  
+        </div>  -->
         
 </div>
 </div>
@@ -215,7 +289,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!--<script src="js/bootstrap.min.js"></script>-->
 <script src="js/bootstrap-number-input.js"></script>
-<script src="js/script.js"></script>
+<script src="js/address.js"></script>
     
     
 </body>
