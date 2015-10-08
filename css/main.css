@@ -617,7 +617,6 @@ overflow: hidden;
 	vertical-align: top;
 	border-radius: 5%;
 	overflow: hidden;
-
 }
 
 .foodInfo{
@@ -1660,6 +1659,123 @@ button{
 #map-canvas img {
     max-width: none;
     max-height: none;
+}
+
+.floatingIcons{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.floatIcon{
+    max-width: 10em;
+    position: absolute;
+}
+
+.floatIcon#metrotown{
+    margin-left: 40%;
+    margin-top: 13%;
+}
+
+.floatIcon#downtown{
+    margin-left: 30%;
+    margin-top: 4%;
+}
+
+.floatIcon#richmond{
+    margin-left: 30%;
+    margin-top: 20%;
+}
+
+.floatIcon#lougheed{
+    margin-left: 50%;
+    margin-top: 10%;
+}
+
+.floatIcon#coquitlam{
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+.floatIcon#surrey{
+    margin-left: 55%;
+    margin-top: 20%;
+}
+
+.floatIcon p{
+    font-size: 1rem;
+    color: white;
+}
+
+.floatIcon:hover{
+    cursor: hand;
+    cursor: pointer;
+}
+
+.floatIcon img{
+    max-height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.floatIcon .locTag{
+    margin-top: 2rem;
+}
+
+.floatIcon .featuredLocation{
+	width: 100%;
+	display: inline-block;
+	margin-left: -40%;
+	height: auto;
+	background-color: white;
+	vertical-align: top;
+	border-radius: 5%;
+	overflow: hidden;
+    visibility: hidden;
+}
+
+.floatIcon:hover .featuredLocation{
+    visibility: visible;
+}
+
+.floatIcon .featuredLocationInfo{
+	display: inline-block;
+    width: 95%;
+    margin-left: 3%;
+}
+
+.floatIcon .featuredLocationInfo p{
+    color: black;
+}
+
+.floatIcon .featuredLocationImage{
+    width: 100%;
+	vertical-align: top;
+	
+	display: inline-block;
+}
+
+.floatIcon .featuredLocationImage img{
+    max-height: none;
+}
+
+.floatIcon .arrow-down{
+   	width: 0; 
+	height: 0; 
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	
+	border-top: 25px solid #ECEDEC;
+	margin-left: -0.5%;
+    margin-top: 0;
+	position: absolute;
+    display: none;
+}
+
+.floatIcon:hover .arrow-down{
+    display: block;
 }
 
 
