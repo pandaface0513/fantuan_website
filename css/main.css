@@ -1661,3 +1661,46 @@ button{
     max-width: none;
     max-height: none;
 }
+
+
+/* Firefox debug */
+@-moz-document url-prefix() {
+
+/*	.landingIcon{
+		font-size: 1em;
+	} */
+
+	#map-canvas{
+		margin: 0;
+		padding: 1rem;
+		width: 18rem;
+		height: 18rem;
+	}
+
+	.loginContainer{
+		width: 50%;
+		margin-left: 25%;
+		margin-right: auto;
+	}
+
+	.dialog{
+		font-size: 0.6em;
+		max-height: 75%;
+	}
+
+	#foodDetails.dialog img{
+		max-width: 90%;
+	}
+
+	.mapContainer{
+		height: 820px;
+	}
+
+    .featuredRestaurantInfo{
+		font-size: 1em;
+	}
+
+	.gridText{
+		font-size: 0.8em;
+	}
+}
