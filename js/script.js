@@ -6,6 +6,8 @@ var bone = 12.95;
 var tofu = 9.95;
 var mushroom = 15.95;
 
+var discount = 0;
+
 var boneValue, tofuValue, mushroomValue;
 
 var sum, tax, total;
@@ -20,7 +22,40 @@ $(document).ready(function(){
     
     var dialog = document.getElementById('window');
     var mapDialog = document.getElementById('map');
+    var couponDialog = document.getElementById('couponDialog');
     
+    $('#showCoupon').click(function(){
+        $('#couponDialog').show();
+    });
+
+    $('#exitCoupon').click(function(){
+        $('#couponDialog').hide();
+    });
+
+    $('#saveCoupon').click(function(){
+        $('#couponDialog').hide();
+
+        var selected = $('input:radio[name=address]:checked').val();
+
+        if(selected == 'a'){
+            //selectedAddress = addressA;
+            discount = sum * 0.1;
+            $('#couponName').html("10% off");
+        }else if(selected == 'b'){
+            //selectedAddress = addressB;
+            discount = sum * 0.3;
+            $('#couponName').html("30% off");
+        }else{
+            //selectedAddress = addressC;
+            discount = sum * 0.5;
+            $('#couponName').html("50% off"); 
+        }
+        
+        $('#deliveryAddress').html(selectedAddress);
+        
+
+    });
+
     $('#addAddressButton').click(function(){
         $('#window').show();
     });
@@ -125,33 +160,38 @@ $(document).ready(function(){
            mushroomValue = $('#mushroomCounter').val();
            console.log(mushroomValue);
        }
-        
-        sum = (boneValue * bone) + (tofuValue * tofu) + (mushroomValue * mushroom);
-        sum = sum.toFixed(2);
-        
-        console.log(sum);
-        
-        $('#sum').html("餐费总额：$" + sum);
-        
-        $('#summary').html("$" + sum);
-        
-        tax = (sum * 0.05).toFixed(2);
-        
-        $('#tax').html("$" + tax);
-        
-        total = (sum * 1) + (tax * 1) + (8);
-        
-        total = total.toFixed(2);
-        
-        $('.priceTotal').html("<h2>= $" + total + " (建议小费至少10%)</h2>");
-        
-        var count = boneValue * 1 + tofuValue * 1 + mushroomValue * 1;
-        $('#cartCount').html(count);
+
+       updateCart();
         
     });
     
     
 });
+
+//update cart function
+function updateCart(){
+    sum = (boneValue * bone) + (tofuValue * tofu) + (mushroomValue * mushroom) - discount;
+    sum = sum.toFixed(2);
+        
+    console.log(sum);
+        
+    $('#sum').html("餐费总额：$" + sum);
+        
+    $('#summary').html("$" + sum);
+        
+    tax = (sum * 0.05).toFixed(2);
+        
+    $('#tax').html("$" + tax);
+       
+    total = (sum * 1) + (tax * 1) + (8);
+        
+    total = total.toFixed(2);
+    
+    $('.priceTotal').html("<h2>= $" + total + " (建议小费至少10%)</h2>");
+    
+    var count = boneValue * 1 + tofuValue * 1 + mushroomValue * 1;
+    $('#cartCount').html(count);
+}
 	
 // Show the location (address) on the map.
 function ShowLocation( latlng, address)

@@ -1156,8 +1156,24 @@ vertical-align: middle;
     display: none;
 }
 
-.dialog:after{
-	background: black;
+#couponDialog ul{
+	list-style: none;
+}
+
+#couponDialog li{
+	margin-left: 5%;
+	display: inline-block;
+}
+
+#couponDialog li input[type=radio]{
+	display: inline-block;
+	vertical-align: center;
+}
+
+.deliveryAddress{
+	margin-left: 20%;
+	display: inline-block;
+	width: 100%;
 }
 
 #addAddressForm input[type=text]{

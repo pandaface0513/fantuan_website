@@ -125,6 +125,43 @@
                  <button id="saveMap">保存</button>
                 
             </div>
+
+
+                <div id="couponDialog" class="dialog">
+                 	<div class="subDetails" id="middleBox">
+
+                 		<div class="boxTitle">
+		                    <p>Coupon Code</p>
+		                    </div>
+
+                 		<form>
+                 			<ul>
+                 				<li>
+		                 			<input type="radio" name="address" value="a" checked>
+		                 			<div class="deliveryAddress">
+		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
+		                 			</div>
+                 				</li>
+                 				<li>
+		                 			<input type="radio" name="address" value="b">
+		                 			<div class="deliveryAddress">
+		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
+		                 			</div>
+                 				</li>
+                 				<li>
+		                 			<input type="radio"	name="address" value="c">
+		                 			<div class="deliveryAddress">
+		                 				<h3>Address C<br>778-239-9269<br>17420 61A ave, Surrey, B.C.</h3>
+		                 			</div>
+                 				</li>
+                 			</ul>
+                 		</form>
+                    	
+                	</div>
+	                <button id="exitCoupon">取消</button>
+	                <button id="saveCoupon">保存</button>
+	                
+            	</div>
             
             <div id="deliveryAddress">
 
@@ -153,7 +190,7 @@
 			     </select>
                 
                 <div class="coupon">
-                    <p>有3个优惠券可用</p><input type="button" value="使用 >"/>
+                    <p id="couponName">有3个优惠券可用</p><input id="showCoupon" type="button" value="使用 >"/>
                 </div>
 
 			      <textarea id="commentBox"></textarea>
@@ -283,7 +320,6 @@
 <!--<script src="js/bootstrap.min.js"></script>-->
 <script src="js/bootstrap-number-input.js"></script>
 <script src="js/script.js"></script>
-    
     
 </body>
 
