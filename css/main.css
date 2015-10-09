@@ -1744,6 +1744,7 @@ button{
 	display: inline-block;
     width: 95%;
     margin-left: 3%;
+    background-color: #ECEDEC;
 }
 
 .floatIcon .featuredLocationInfo p{
