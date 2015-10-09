@@ -1820,4 +1820,20 @@ button{
 	.gridText{
 		font-size: 0.8em;
 	}
+
+.searchBar input[type=text]#checkoutSearch{
+	margin-left: 55%;
+	margin-top: 1em;
+	vertical-align: top;
+	height: 25px;
+	margin-right: 0;
+}
+
+.deliveryButton{
+	font-size: 0.8em;
+}
+
+.priceComponents{
+font-size: 0.9em;
+
 }
