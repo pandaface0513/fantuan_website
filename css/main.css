@@ -1789,10 +1789,6 @@ button{
 /* Firefox debug */
 @-moz-document url-prefix() {
 
-/*	.landingIcon{
-		font-size: 1em;
-	} */
-
 	#map-canvas{
 		margin: 0;
 		padding: 1rem;
@@ -1827,21 +1823,31 @@ button{
 		font-size: 0.8em;
 	}
 
-.searchBar input[type=text]#checkoutSearch{
-	margin-left: 55%;
-	margin-top: 1em;
-	vertical-align: top;
-	height: 25px;
-	margin-right: 0;
-}
+    .searchBar input[type=text]#checkoutSearch{
+        margin-left: 55%;
+        margin-top: 1em;
+        vertical-align: top;
+        height: 25px;
+        margin-right: 0;
+    }
 
-.deliveryButton{
-	font-size: 0.8em;
-}
+    .deliveryButton{
+        font-size: 0.8em;
+    }
 
-.priceComponents{
-font-size: 0.9em;
+    .priceComponents{
+        font-size: 0.9em;
+    }
 
+    .deliveryButton{
+        font-size: 0.8em;
+    }
+
+    .priceComponents{
+    font-size: 0.9em;
+
+    }
+    
 }
 
 
