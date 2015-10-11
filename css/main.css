@@ -1007,6 +1007,11 @@ margin-bottom: 1.5%;
 	border: 1px solid #42ACA4;
 }
 
+.removeCouponText{
+	text-shadow: 0 0 3px #FF0000;
+}
+
+
 .coupon{
     display: block;
     margin-top: 1rem;
@@ -1016,6 +1021,7 @@ margin-bottom: 1.5%;
     background: white;
     border: 1px solid #42ACA4;
 }
+
 
 .coupon p{
     display: inline-block;
@@ -1744,6 +1750,7 @@ button{
 	display: inline-block;
     width: 95%;
     margin-left: 3%;
+    background-color: #ECEDEC;
 }
 
 .floatIcon .featuredLocationInfo p{
@@ -1819,4 +1826,22 @@ button{
 	.gridText{
 		font-size: 0.8em;
 	}
+
+.searchBar input[type=text]#checkoutSearch{
+	margin-left: 55%;
+	margin-top: 1em;
+	vertical-align: top;
+	height: 25px;
+	margin-right: 0;
 }
+
+.deliveryButton{
+	font-size: 0.8em;
+}
+
+.priceComponents{
+font-size: 0.9em;
+
+}
+
+

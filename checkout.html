@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang='en-us'>
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,7 @@
 	<div class="searchBar">
 	<p>餐厅列表 > <a href="restaurantDetails.html">老东北</a> ></p>
 	<p id="black"> 订单详情</p>
-	<input type="text" placeholder="搜索餐厅" name="firstname">
+	<input id="checkoutSearch" type="text" placeholder="搜索餐厅" name="firstname">
 	<button type="button"><img src="img/toolbar_find.png"/></button>
 	</div>
 
@@ -56,7 +56,7 @@
             </div>
             
             <div class="right col1of4">
-                <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="1" max="99">
+                <input class="quantity" id="boneCounter" type="number" name="bone" value="1" min="0" max="99">
             </div>
 		</div>
 
@@ -66,7 +66,7 @@
                 $9.95</p>
             </div>
             
-            <div class="right col1of4"><input id="tofuCounter" class="quantity" type="number" name="tofu" value="1" min="1" max="99"></div>
+            <div class="right col1of4"><input id="tofuCounter" class="quantity" type="number" name="tofu" value="1" min="0" max="99"></div>
 
 		</div>
 
@@ -74,7 +74,7 @@
 		<p>小鸡炖蘑菇<br>
 		$15.95</p>
             
-            <div class="right col1of4"><input id="mushroomCounter" class="quantity" type="number" name="mushroom" value="1" min="1" max="99"></div>
+            <div class="right col1of4"><input id="mushroomCounter" class="quantity" type="number" name="mushroom" value="1" min="0" max="99"></div>
 
 		</div>
 
@@ -138,6 +138,12 @@
 		                 			<input type="radio"	name="coupon" value="c">
 		                 			<div class="couponImage">
 		                 				<img src="img/3OFF.PNG"/>
+		                 			</div>
+                 				</li>
+                                <li>
+		                 			<input type="radio"	name="coupon" value="d">
+		                 			<div class="couponImage">
+		                 				 <p class="removeCouponText">Remove Coupons</p>
 		                 			</div>
                  				</li>
                  			</ul>

@@ -49,10 +49,14 @@ $(document).ready(function(){
             //selectedAddress = addressB;
             discount = sum * 0.2;
             $('#couponName').html("20% off");
-        }else{
+        }else if(selected == 'c'){
             //selectedAddress = addressC;
             discount = 3 * 1;
             $('#couponName').html("$3 off"); 
+        }else {
+            //selectedAddress = addressD;
+            discount = 0;
+            $('#couponName').html("None"); 
         }
         
         $('#deliveryAddress').html(selectedAddress);
