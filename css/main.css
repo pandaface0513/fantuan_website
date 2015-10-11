@@ -1477,7 +1477,7 @@ vertical-align: middle;
 
 .loginSection{
 	display: inline-block;
-	width: 47%;
+	width: 48%;
 	height: auto;
 	
 	vertical-align: top;
@@ -1497,6 +1497,7 @@ vertical-align: middle;
 
 .loginLeft p{
 	margin-bottom: 1em;
+    font-size: 0.9em;
 }
 
 .loginLeft img{
@@ -1521,6 +1522,7 @@ vertical-align: middle;
 	text-align: left;
 	color: grey;
 	margin-left: 5%;
+    font-size: 0.9em
 }
 
 .loginRight input[type=text]{
