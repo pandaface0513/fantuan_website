@@ -7,6 +7,7 @@ var tofu = 9.95;
 var mushroom = 15.95;
 
 var discount = 0;
+var discountRatio = 0;
 
 var boneValue, tofuValue, mushroomValue;
 
@@ -44,14 +45,17 @@ $(document).ready(function(){
         if(selected == 'a'){
             //selectedAddress = addressA;
             discount = sum * 0.1;
+            discountRatio = 0.1;
             $('#couponName').html("10% off");
         }else if(selected == 'b'){
             //selectedAddress = addressB;
             discount = sum * 0.2;
+            discountRatio = 0.2;
             $('#couponName').html("20% off");
         }else if(selected == 'c'){
             //selectedAddress = addressC;
             discount = 3 * 1;
+            discountRatio = 0;
             $('#couponName').html("$3 off"); 
         }else {
             //selectedAddress = addressD;
@@ -186,24 +190,29 @@ $(document).ready(function(){
 
 //update cart function
 function updateCart(){
-    sum = (boneValue * bone) + (tofuValue * tofu) + (mushroomValue * mushroom) - discount;
+    sum = (boneValue * bone) + (tofuValue * tofu) + (mushroomValue * mushroom);
     sum = sum.toFixed(2);
-        
+    
     console.log(sum);
         
     $('#sum').html("餐费总额：$" + sum);
         
     $('#summary').html("$" + sum);
+    
+    if(discountRatio != 0){
+        discount = sum * discountRatio;
+    }
+    
+    $('#discount').html("$" + discount.toFixed(2));
         
     tax = (sum * 0.05).toFixed(2);
         
     $('#tax').html("$" + tax);
        
-    total = (sum * 1) + (tax * 1) + (8);
+    total = (sum * 1) - (discount * 1) + (tax * 1) + (8);
         
     total = total.toFixed(2);
     
-    $('#discount').html("$" + discount.toFixed(2));
     $('.priceTotal').html("<h2>= $" + total + " (建议小费至少10%)</h2>");
     
     var count = boneValue * 1 + tofuValue * 1 + mushroomValue * 1;
