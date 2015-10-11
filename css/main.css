@@ -1682,32 +1682,32 @@ button{
 
 .floatIcon#metrotown{
     margin-left: 40%;
-    margin-top: 13%;
+    margin-top: 10%;
 }
 
 .floatIcon#downtown{
     margin-left: 30%;
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 .floatIcon#richmond{
     margin-left: 30%;
-    margin-top: 20%;
+    margin-top: 17%;
 }
 
 .floatIcon#lougheed{
     margin-left: 50%;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .floatIcon#coquitlam{
     margin-left: 60%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .floatIcon#surrey{
     margin-left: 55%;
-    margin-top: 20%;
+    margin-top: 17%;
 }
 
 .floatIcon p{
@@ -1783,6 +1783,15 @@ button{
 
 .floatIcon:hover .arrow-down{
     display: block;
+}
+
+.headerTitle{
+    color: white;
+}
+
+.headerTitle h1{
+    font-weight: lighter;
+    margin-bottom: 0;
 }
 
 
