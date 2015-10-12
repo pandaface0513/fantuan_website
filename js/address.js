@@ -43,24 +43,13 @@ $(document).ready(function(){
         var address = document.getElementById( "mapAddress" ).value;
         
         $('.subAddressBox .status').removeClass("selected");
-        $('.subAddressBox input:checked').prop('checked', false);
         
         fullAddress =  "<div class='subAddressBox new'><div class='boxTitle'><p>" + person + "</p><p class='orange'>" + phone + "</p><span class='right status selected'>默认地址</span></div><div class='listdeliveryAddress'><br>" + address + "</h3></div><input type='radio' name='address' checked>送到该位置</div>";
         
         $('#deliveryAddress').html(fullAddress);
-    
-        /*$('.subAddressBox.new input:radio').prop("checked", true);*/
-        $('.subAddressBox.new').removeClass('new');
         
         $('#window').hide();
         
-        $('.subAddressBox').click(function(){
-            $('.subAddressBox .status').removeClass("selected");
-            var par = $('.subAddressBox input:checked').parent();
-            par.find('.boxTitle .status').addClass("selected");
-            console.log("hi");
-        });
-
         // Make asynchronous call to Google geocoding API
         geocoder.geocode( { 'address': address }, function(results, status) {
 /*            var addr_type = results[0].types[0];	// type of address inputted that was geocoded*/
@@ -88,6 +77,17 @@ $(document).ready(function(){
         $("#page-cover").css("opacity",0.6).fadeOut(300);
         
         $('#addresses').html(fullAddress + $('#addresses').html());
+        
+        $('.subAddressBox input[name=address]').checked = false;
+        $('.subAddressBox.new input:radio').prop("checked", true);
+        $('.subAddressBox.new').removeClass('new');
+        $('.subAddressBox').click(function(){
+            $('.subAddressBox .status').removeClass("selected");
+            var par = $('.subAddressBox input:checked').parent();
+            par.find('.boxTitle .status').addClass("selected");
+            console.log("hi");
+        });
+
         
     });
     
